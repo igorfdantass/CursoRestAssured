@@ -1,0 +1,27 @@
+package br.cra.rest;
+
+import static io.restassured.RestAssured.*;
+import static io.restassured.RestAssured.request;
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+
+import io.restassured.RestAssured;
+import io.restassured.http.Method;
+import io.restassured.response.Response;
+
+public class OlaMundoTest {
+
+	@Test
+	public void testOlaMundo() {
+		Response response = request(Method.GET, "http://restapi.wcaquino.me/ola");
+		assertEquals(200, response.getStatusCode());	
+	}
+	
+	@Test
+	public void outrasFormas() {
+		get("http://restapi.wcaquino.me/ola").then().statusCode(200);
+		
+		RestAssured.given()
+	}
+}

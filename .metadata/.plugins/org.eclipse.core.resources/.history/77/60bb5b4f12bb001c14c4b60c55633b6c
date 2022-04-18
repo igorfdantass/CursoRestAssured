@@ -1,0 +1,30 @@
+package br.cra.rest;
+
+import static io.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.is;
+
+import org.hamcrest.Matchers;
+import org.junit.Before;
+import org.junit.Test;
+
+
+public class AuthTest {
+	
+	@Before
+	public void setup() {
+		baseURI = "https://swapi.dev/api/";
+	}
+	
+	@Test
+	public void deveAcessarSWAPI() {
+		given()
+			.log().all()
+		.when()
+			.get("people/1")
+		.then()
+			.log().all()
+			.statusCode(200)
+			.body("name", is("Luke Skywalker"))
+		;
+	}
+}

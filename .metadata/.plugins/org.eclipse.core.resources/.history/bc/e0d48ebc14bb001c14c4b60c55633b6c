@@ -1,0 +1,37 @@
+package br.cra.rest;
+
+import static io.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.is;
+
+import org.junit.Before;
+import org.junit.Test;
+
+
+public class AuthTest {
+	
+	@Test
+	public void deveAcessarSWAPI() {
+		given()
+			.log().all()
+		.when()
+			.get("https://swapi.dev/api/people/1")
+		.then()
+			.log().all()
+			.statusCode(200)
+			.body("name", is("Luke Skywalker"))
+		;
+	}
+	
+	@Test
+	public void deveObterClima() {
+		given()
+			.log().all()
+			.queryParam("q", "Monteiro,PB")
+		.when()
+			.get("https://community-open-weather-map.p.rapidapi.com/weather")
+		.then()
+			.log().all()
+			.statusCode(200)
+		;		
+	}
+}

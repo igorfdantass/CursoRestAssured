@@ -1,0 +1,24 @@
+package br.cra.rest;
+
+import static io.restassured.RestAssured.*;
+
+import org.junit.Test;
+
+import io.restassured.matcher.RestAssuredMatchers;
+
+
+public class SchemaTest {
+	
+	@Test
+	public void deveValidarschemaXML() {
+		given()
+			.log().all()
+		.when()
+			.get("https://restapi.wcaquino.me/usersXML")
+		.then()
+			.log().all()
+			.statusCode(200)
+			.body(RestAssuredMatchers.matchesXsdInClasspath("users.xsd"))
+		;
+	}
+}

@@ -1,0 +1,18 @@
+package br.cra.rest;
+
+import static io.restassured.RestAssured.*;
+
+import org.junit.Test;
+
+import io.restassured.RestAssured;
+
+public class SchemaTest {
+	
+	@Test
+	public void deveValidarschemaXML() {
+		given()
+		.when()
+		.then()
+		;
+	}
+}

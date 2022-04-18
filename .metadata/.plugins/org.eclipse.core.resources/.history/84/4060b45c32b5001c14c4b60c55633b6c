@@ -1,0 +1,25 @@
+package br.cra.rest;
+
+import static io.restassured.RestAssured.*;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import io.restassured.RestAssured;
+
+public class TestesHTML {
+
+	@BeforeClass
+	public static void setup() {
+		baseU = "http://restapi.wcaquino.me";	
+	}
+	
+	@Test
+	public void deveFazerBuscasHTML() {
+		given()
+		.when()
+		.then()
+		;
+	}
+	
+}

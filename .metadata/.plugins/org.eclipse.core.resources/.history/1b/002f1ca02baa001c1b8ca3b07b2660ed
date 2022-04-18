@@ -1,0 +1,11 @@
+package br.cra.rest;
+
+import org.junit.Test;
+
+public class OlaMundoTest {
+	
+	@Test
+	private void testOlaMundo() {
+		
+	}
+}

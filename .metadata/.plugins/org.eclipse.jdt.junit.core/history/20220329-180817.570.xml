@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="UserJsonTest" project="CurstoRestAssured" tests="8" started="8" failures="0" errors="0" ignored="0">
+  <testsuite name="br.cra.rest.UserJsonTest" time="6.01">
+    <testcase name="deveVerificarLista" classname="br.cra.rest.UserJsonTest" time="3.673"/>
+    <testcase name="deveVerificarPrimeiroNivel" classname="br.cra.rest.UserJsonTest" time="0.385"/>
+    <testcase name="deveVerificarSegundoNivel" classname="br.cra.rest.UserJsonTest" time="0.352"/>
+    <testcase name="deveVerificarListaRaiz" classname="br.cra.rest.UserJsonTest" time="0.356"/>
+    <testcase name="deveUnirJsonPathComJava" classname="br.cra.rest.UserJsonTest" time="0.316"/>
+    <testcase name="deveVerificarUsuarioInexistente" classname="br.cra.rest.UserJsonTest" time="0.266"/>
+    <testcase name="deveFazerVerificacoesAvancadas" classname="br.cra.rest.UserJsonTest" time="0.375"/>
+    <testcase name="deveVerificarPrimeiroNivelOutrasFormas" classname="br.cra.rest.UserJsonTest" time="0.287"/>
+  </testsuite>
+</testrun>

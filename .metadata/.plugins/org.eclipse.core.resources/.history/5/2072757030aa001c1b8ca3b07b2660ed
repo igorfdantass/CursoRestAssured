@@ -1,0 +1,19 @@
+package br.cra.rest;
+
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.is;
+
+import org.junit.Test;
+
+public class UserJsonTest {
+	
+	@Test
+	public void deveVerificarPrimeiroNivel() {
+		given()
+		.when()
+			.get("http://restapi.wcaquino.me/ola")
+		.then()
+			.statusCode(200)
+			.body("id", is(1));
+	}
+}

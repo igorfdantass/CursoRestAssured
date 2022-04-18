@@ -1,0 +1,58 @@
+package br.cra.rest;
+
+import static io.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.*;
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
+
+public class UserJsonTest {
+	
+	@Test
+	public void deveVerificarPrimeiroNivel() {
+		given()
+		.when()
+			.get("http://restapi.wcaquino.me/users/1")
+		.then()
+			.statusCode(200)
+			.body("id", is(1))
+			.body("name", containsString("Silva"))
+			.body("age", greaterThan(18))
+			;
+	}
+	
+	@Test
+	public void deveVerificarPrimeiroNivelOutrasFormas() {
+		Response response = get("http://restapi.wcaquino.me/users/1");
+		
+		//path
+		assertEquals(new Integer(1), response.path("id"));
+		
+		//Jsonpath
+		JsonPath jpath = new JsonPath(response.asString());
+		assertEquals(1,jpath.getInt("id"));
+		
+		//from
+		int id = JsonPath.from(response.asString()).getInt("id");
+		assertEquals(1, id);
+		
+	}
+	
+	@Test
+	public void deveVerificarSegundoNivel() {
+		given()
+		.when()
+			.get("http://restapi.wcaquino.me/users/2")
+		.then()
+			.statusCode(200)
+			.body("id", is(2))
+			.body("name", containsString("Maria"))
+			.body("endereco.rua", is("Rua dos bobos"))
+			.body("endereco.numero", is(0))
+			;
+	}
+	
+}

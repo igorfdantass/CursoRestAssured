@@ -1,0 +1,30 @@
+package br.cra.rest;
+
+import static io.restassured.RestAssured.*;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import io.restassured.http.ContentType;
+
+
+public class EnvioDadosTest {
+	
+	@BeforeClass
+	public static void setup() {
+		baseURI = "http://restapi.wcaquino.me";	
+	}
+	
+	@Test
+	public void deveEnviarFormatViaQuery() {
+		given()
+			.log().all()
+		.when()
+			.get("/v2/users?format=xml")
+		.then()
+			.log().all()
+			.statusCode(200)
+			.contentType(ContentType.XML)
+		;
+	}
+}

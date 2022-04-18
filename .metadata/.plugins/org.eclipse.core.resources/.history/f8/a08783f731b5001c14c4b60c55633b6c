@@ -1,0 +1,13 @@
+package br.cra.rest;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+public class TestesHTML {
+
+	@BeforeClass
+	public void static setup(){
+		baseURI = "http://restapi.wcaquino.me";	
+	}
+	
+}

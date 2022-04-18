@@ -1,0 +1,48 @@
+package br.cra.rest;
+
+import static io.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.is;
+
+import org.hamcrest.Matchers;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+
+public class VerbosHTMLTest {
+	@BeforeClass
+	public static void setup() {
+		baseURI = "http://restapi.wcaquino.me";	
+	}
+
+	@Test 
+	public void deveSalvarUsuario() {
+		given()
+			.log().all()
+			.contentType("application/json")
+			.body("{\"name\": \"igor\", \"age\": \"26\"}")
+		.when()
+			.post("/users")
+		.then()
+			.log().all()
+			.statusCode(201)
+		;
+	}
+	
+	@Test 
+	public void naoDeveSalvarUsuario() {
+		given()
+			.log().all()
+			.contentType("application/json")
+			.body("{\"age\": \"26\"}")
+		.when()
+			.post("/users")
+		.then()
+			.log().all()
+			.statusCode(400)
+			.body("id", is(null))
+			.body("error", is("Name é um atributo obrigatório"))
+		;
+	}
+	
+	
+}

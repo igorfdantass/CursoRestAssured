@@ -1,0 +1,32 @@
+package br.cra.rest;
+
+import static io.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.is;
+
+import org.hamcrest.Matcher;
+import org.hamcrest.Matchers;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+
+public class TestesArquivos {
+	
+	@BeforeClass
+	public static void setup() {
+		baseURI = "http://restapi.wcaquino.me";
+	}
+	
+	@Test
+	public void deveObrigarEnvioArquivo() {
+		given()
+			.log().all()
+		.when()
+			.post("/upload")
+		.then()
+			.log().all()
+			.statusCode(404)
+			.body("error", is("Arquivo não enviado"))
+		;
+	}
+	
+}

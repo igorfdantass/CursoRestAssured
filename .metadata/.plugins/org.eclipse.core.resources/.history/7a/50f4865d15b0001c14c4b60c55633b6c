@@ -1,0 +1,30 @@
+package br.cra.rest;
+
+import static io.restassured.RestAssured.*;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import io.restassured.RestAssured;
+
+public class VerbosHTMLTest {
+	@BeforeClass
+	public static void setup() {
+		baseURI = "http://restapi.wcaquino.me";	
+	}
+	@Test 
+	public void deveSalvarUsuario() {
+		given()
+			.log().all()
+			.body("{\"name\": \"igor\", \"age\": \"26\"}")
+		.when()
+			.post("/users")
+		.then()
+			.log().all()
+			.statusCode(200)
+		;
+	}
+	
+	
+	
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="EnvioDadosTest" project="CurstoRestAssured" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="br.cra.rest.EnvioDadosTest" time="2.556">
+    <testcase name="deveEnviarFormatJsonViaQuery" classname="br.cra.rest.EnvioDadosTest" time="2.181"/>
+    <testcase name="deveEnviarFormatXMLViaQuery" classname="br.cra.rest.EnvioDadosTest" time="0.375"/>
+  </testsuite>
+</testrun>

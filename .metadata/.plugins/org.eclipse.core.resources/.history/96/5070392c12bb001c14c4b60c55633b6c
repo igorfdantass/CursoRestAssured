@@ -1,0 +1,25 @@
+package br.cra.rest;
+
+import static io.restassured.RestAssured.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+
+public class AuthTest {
+	
+	@Before
+	public void setup() {
+		
+	}
+	
+	@Test
+	public void deveAcessarSWAPI() {
+		given()
+			.log().all()
+		.when()
+			.get()
+		.then()
+		;
+	}
+}

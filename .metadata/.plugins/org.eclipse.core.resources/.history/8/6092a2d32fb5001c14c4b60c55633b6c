@@ -1,0 +1,14 @@
+package br.cra.rest;
+
+import static io.restassured.RestAssured.*;
+
+import org.junit.Test;
+
+import io.restassured.RestAssured;
+
+public class EnvioDadosTest {
+	@Test
+	public void deveEnviarFormatViaQuery() {
+		given();
+	}
+}
