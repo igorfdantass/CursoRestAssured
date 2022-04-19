@@ -1,0 +1,64 @@
+Critérios de aceite propostos no projeto do curso
+
+*Cenários criados a partir dos critérios propostos
+
+Critério 1: Não deve permitir acessar a API sem token
+	get -> /contas
+	cen_1:  acessar contas com sucesso
+	cen_2:  falha ao tentar acessar
+
+Critério 2: Deve poder incluir uma nova conta
+	login: post -> /signin
+		input: email e senha
+	Incluir conta: post -> /contas
+		input: nome
+	cen_3: incluir com sucesso
+	cen_4: falha na inclusão
+Critério 3: Deve poder alterar conta
+	put -> /contas/$id
+	cen_5: alteração com sucesso
+	cen_6: falha ao alterar conta inexistente
+Critério 4: Não deve incluir conta com nome repetido
+	post -> /contas
+	cen_5: incluir conta ja existente
+Critério 5: Deve inserir movimentação com sucesso
+	post -> /transações
+	input:
+		conta_id
+		descricao
+		envolvido
+		tipo -> DESP | REC
+		data_transacao (dd/MM/YYYY)
+		data_pagamento (dd/MM/YYYY)
+		valor (0.00f)
+		status -> true | false	
+	cen_6: inserção com tipo DESP e status true
+	cen_7: inserção com tipo REC e status false
+	cen_8: inserção com tipo diferente de DESP | REC
+	cen_9: inserção com valor int
+	cen_10: inserção com data_transacao e data_pagamento inválidos	
+Critério 6: Deve validar campos obrigatórios na movimentação	
+	post -> /transações
+	cen_11: requisição vazia
+Critério 7: Não deve cadastrar movimentação futura
+	post -> /transações
+	cen_12: falha ao inserir com data_transação futura
+Critério 8: Não deve remover conta com movimentação
+	delete -> /contas/$id
+	cen_13: falha ao deletar conta com movimentação
+	cen_14: delete de conta com sucesso
+	cen_15: falha ao tentar remover conta inexistente
+Critério 9: Deve calcular saldo Contas
+	get -> /saldo
+	obs: apenas retorna contas que tem movimentações e o respectivo saldo
+	cen_16: saldo com 1 conta com movimentação
+	cen_17: saldo com 1 conta sem movimentação
+	cen_18: saldo com 2 contas com movimentação em ambas
+	cen_19: saldo com 1 conta com movimentação e outra sem movimentação
+Critério 10: Deve permitir remover movimentações de contas	
+	delete -> /transacoes/$id
+	cen_20: remoção de transações com sucesso
+	cen_21: remoção de conta pós remoção de transação única
+	cen_22: falha em remoção de transação inexistente
+	
+	
