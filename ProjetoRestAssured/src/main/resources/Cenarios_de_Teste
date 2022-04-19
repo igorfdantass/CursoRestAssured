@@ -1,9 +1,16 @@
 Critérios de aceite propostos no projeto do curso
+Dados para login:
+	Nome - igor
+	Email - igor@projeto
+	Senha - projeto123
+	
+
 
 *Cenários criados a partir dos critérios propostos
 
 Critério 1: Não deve permitir acessar a API sem token
 	get -> /contas
+	post -> /signin
 	cen_1:  acessar contas com sucesso
 	cen_2:  falha ao tentar acessar
 

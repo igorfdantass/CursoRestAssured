@@ -1157,3 +1157,108 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact com.google.gu
 2022-04-18 21:08:59,607 [Worker-216: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /ProjetoRestAssured/src/test/java
 2022-04-18 21:08:59,608 [Worker-216: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /ProjetoRestAssured/src/test/resources
 2022-04-18 21:08:59,944 [Worker-216: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 1 sec
+2022-04-19 07:19:07,511 [Worker-354: Launching ProjectTests.falhaAoAcessarSemToken] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.sun.xml.bind:jaxb-osgi:jar:2.2.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2022-04-19 07:19:07,567 [Worker-354: Launching ProjectTests.falhaAoAcessarSemToken] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 07:19:07,570 [Worker-354: Launching ProjectTests.falhaAoAcessarSemToken] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-19 07:19:07,576 [Worker-354: Launching ProjectTests.falhaAoAcessarSemToken] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 07:19:07,578 [Worker-354: Launching ProjectTests.falhaAoAcessarSemToken] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-19 07:19:35,943 [Worker-356: Launching ProjectTests.falhaAoAcessarSemToken (Failed Tests first)] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 07:19:35,945 [Worker-356: Launching ProjectTests.falhaAoAcessarSemToken (Failed Tests first)] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-19 07:19:35,949 [Worker-356: Launching ProjectTests.falhaAoAcessarSemToken (Failed Tests first)] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 07:19:35,951 [Worker-356: Launching ProjectTests.falhaAoAcessarSemToken (Failed Tests first)] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-19 07:21:33,824 [Worker-357: Launching Rerun br.cra.tests.ProjectTests.falhaAoAcessarSemToken] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 07:21:33,826 [Worker-357: Launching Rerun br.cra.tests.ProjectTests.falhaAoAcessarSemToken] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-19 07:21:33,828 [Worker-357: Launching Rerun br.cra.tests.ProjectTests.falhaAoAcessarSemToken] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 07:21:33,830 [Worker-357: Launching Rerun br.cra.tests.ProjectTests.falhaAoAcessarSemToken] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-19 07:24:37,716 [Worker-359: Launching Rerun br.cra.tests.ProjectTests.falhaAoAcessarSemToken] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 07:24:37,718 [Worker-359: Launching Rerun br.cra.tests.ProjectTests.falhaAoAcessarSemToken] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-19 07:24:37,720 [Worker-359: Launching Rerun br.cra.tests.ProjectTests.falhaAoAcessarSemToken] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 07:24:37,722 [Worker-359: Launching Rerun br.cra.tests.ProjectTests.falhaAoAcessarSemToken] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-19 07:35:47,653 [Worker-364: Launching ProjectTests.deveAcessarComToken] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 07:35:47,654 [Worker-364: Launching ProjectTests.deveAcessarComToken] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-19 07:35:47,660 [Worker-364: Launching ProjectTests.deveAcessarComToken] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 07:35:47,662 [Worker-364: Launching ProjectTests.deveAcessarComToken] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-19 07:38:05,447 [Worker-362: Launching ProjectTests.deveAcessarComToken] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 07:38:05,449 [Worker-362: Launching ProjectTests.deveAcessarComToken] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-19 07:38:05,451 [Worker-362: Launching ProjectTests.deveAcessarComToken] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 07:38:05,455 [Worker-362: Launching ProjectTests.deveAcessarComToken] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-19 07:38:59,592 [Worker-364: Launching ProjectTests.deveAcessarComToken] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 07:38:59,594 [Worker-364: Launching ProjectTests.deveAcessarComToken] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-19 07:38:59,595 [Worker-364: Launching ProjectTests.deveAcessarComToken] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 07:38:59,597 [Worker-364: Launching ProjectTests.deveAcessarComToken] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-19 07:41:32,820 [Worker-362: Launching ProjectTests.deveAcessarComToken] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 07:41:32,822 [Worker-362: Launching ProjectTests.deveAcessarComToken] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-19 07:41:32,827 [Worker-362: Launching ProjectTests.deveAcessarComToken] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 07:41:32,829 [Worker-362: Launching ProjectTests.deveAcessarComToken] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-19 07:46:43,269 [Worker-368: Launching ProjectTests.deveAcessarComToken] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 07:46:43,271 [Worker-368: Launching ProjectTests.deveAcessarComToken] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-19 07:46:43,273 [Worker-368: Launching ProjectTests.deveAcessarComToken] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 07:46:43,274 [Worker-368: Launching ProjectTests.deveAcessarComToken] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-19 07:49:08,034 [Worker-374: Launching ProjectTests.deveAcessarComToken] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 07:49:08,036 [Worker-374: Launching ProjectTests.deveAcessarComToken] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-19 07:49:08,038 [Worker-374: Launching ProjectTests.deveAcessarComToken] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 07:49:08,039 [Worker-374: Launching ProjectTests.deveAcessarComToken] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-19 07:49:53,422 [Worker-374: Launching ProjectTests.deveAcessarComToken] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 07:49:53,424 [Worker-374: Launching ProjectTests.deveAcessarComToken] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-19 07:49:53,426 [Worker-374: Launching ProjectTests.deveAcessarComToken] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 07:49:53,427 [Worker-374: Launching ProjectTests.deveAcessarComToken] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-19 07:52:47,890 [Worker-374: Launching ProjectTests.deveAcessarComToken] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 07:52:47,892 [Worker-374: Launching ProjectTests.deveAcessarComToken] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-19 07:52:47,893 [Worker-374: Launching ProjectTests.deveAcessarComToken] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 07:52:47,895 [Worker-374: Launching ProjectTests.deveAcessarComToken] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-19 07:53:08,323 [Worker-362: Launching ProjectTests.deveAcessarComToken] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 07:53:08,325 [Worker-362: Launching ProjectTests.deveAcessarComToken] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-19 07:53:08,326 [Worker-362: Launching ProjectTests.deveAcessarComToken] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 07:53:08,328 [Worker-362: Launching ProjectTests.deveAcessarComToken] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-19 07:54:12,034 [Worker-362: Launching ProjectTests.falhaAoAcessarSemToken] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 07:54:12,036 [Worker-362: Launching ProjectTests.falhaAoAcessarSemToken] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-19 07:54:12,038 [Worker-362: Launching ProjectTests.falhaAoAcessarSemToken] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 07:54:12,041 [Worker-362: Launching ProjectTests.falhaAoAcessarSemToken] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-19 08:05:52,262 [Worker-378: Launching ProjectTests] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 08:05:52,264 [Worker-378: Launching ProjectTests] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-19 08:05:52,266 [Worker-378: Launching ProjectTests] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 08:05:52,269 [Worker-378: Launching ProjectTests] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-19 08:11:29,017 [Worker-372: Launching ProjectTests.deveIncluirConta] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 08:11:29,019 [Worker-372: Launching ProjectTests.deveIncluirConta] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-19 08:11:29,021 [Worker-372: Launching ProjectTests.deveIncluirConta] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 08:11:29,022 [Worker-372: Launching ProjectTests.deveIncluirConta] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-19 08:14:25,571 [Worker-381: Launching ProjectTests.naoDeveIncluirSemCampoObrigatorio] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 08:14:25,573 [Worker-381: Launching ProjectTests.naoDeveIncluirSemCampoObrigatorio] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-19 08:14:25,574 [Worker-381: Launching ProjectTests.naoDeveIncluirSemCampoObrigatorio] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 08:14:25,575 [Worker-381: Launching ProjectTests.naoDeveIncluirSemCampoObrigatorio] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-19 08:15:52,889 [Worker-376: Launching ProjectTests.naoDeveIncluirSemCampoObrigatorio] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 08:15:52,891 [Worker-376: Launching ProjectTests.naoDeveIncluirSemCampoObrigatorio] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-19 08:15:52,896 [Worker-376: Launching ProjectTests.naoDeveIncluirSemCampoObrigatorio] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 08:15:52,898 [Worker-376: Launching ProjectTests.naoDeveIncluirSemCampoObrigatorio] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-19 08:18:14,942 [Worker-378: Launching ProjectTests.naoDeveIncluirSemCampoObrigatorio] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 08:18:14,944 [Worker-378: Launching ProjectTests.naoDeveIncluirSemCampoObrigatorio] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-19 08:18:14,945 [Worker-378: Launching ProjectTests.naoDeveIncluirSemCampoObrigatorio] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 08:18:14,946 [Worker-378: Launching ProjectTests.naoDeveIncluirSemCampoObrigatorio] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-19 08:20:18,028 [Worker-382: Launching UserJsonTest.deveVerificarLista] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 08:20:18,030 [Worker-382: Launching UserJsonTest.deveVerificarLista] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2022-04-19 08:20:18,032 [Worker-382: Launching UserJsonTest.deveVerificarLista] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 08:20:18,033 [Worker-382: Launching UserJsonTest.deveVerificarLista] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-19 08:21:09,704 [Worker-382: Launching ProjectTests.naoDeveIncluirSemCampoObrigatorio] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 08:21:09,706 [Worker-382: Launching ProjectTests.naoDeveIncluirSemCampoObrigatorio] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-19 08:21:09,708 [Worker-382: Launching ProjectTests.naoDeveIncluirSemCampoObrigatorio] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 08:21:09,709 [Worker-382: Launching ProjectTests.naoDeveIncluirSemCampoObrigatorio] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-19 08:21:39,162 [Worker-372: Launching ProjectTests.naoDeveIncluirSemCampoObrigatorio] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 08:21:39,164 [Worker-372: Launching ProjectTests.naoDeveIncluirSemCampoObrigatorio] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-19 08:21:39,165 [Worker-372: Launching ProjectTests.naoDeveIncluirSemCampoObrigatorio] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 08:21:39,166 [Worker-372: Launching ProjectTests.naoDeveIncluirSemCampoObrigatorio] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-19 08:22:42,167 [Worker-378: Launching ProjectTests.naoDeveIncluirSemCampoObrigatorio] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 08:22:42,169 [Worker-378: Launching ProjectTests.naoDeveIncluirSemCampoObrigatorio] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-19 08:22:42,170 [Worker-378: Launching ProjectTests.naoDeveIncluirSemCampoObrigatorio] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 08:22:42,173 [Worker-378: Launching ProjectTests.naoDeveIncluirSemCampoObrigatorio] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-19 08:23:07,955 [Worker-378: Launching ProjectTests.naoDeveIncluirSemCampoObrigatorio] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 08:23:07,958 [Worker-378: Launching ProjectTests.naoDeveIncluirSemCampoObrigatorio] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-19 08:23:07,960 [Worker-378: Launching ProjectTests.naoDeveIncluirSemCampoObrigatorio] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 08:23:07,961 [Worker-378: Launching ProjectTests.naoDeveIncluirSemCampoObrigatorio] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-19 08:23:44,720 [Worker-381: Launching UserJsonTest.deveVerificarListaRaiz] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 08:23:44,724 [Worker-381: Launching UserJsonTest.deveVerificarListaRaiz] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2022-04-19 08:23:44,725 [Worker-381: Launching UserJsonTest.deveVerificarListaRaiz] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 08:23:44,727 [Worker-381: Launching UserJsonTest.deveVerificarListaRaiz] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-19 08:24:35,939 [Worker-382: Launching ProjectTests.naoDeveIncluirSemCampoObrigatorio] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 08:24:35,942 [Worker-382: Launching ProjectTests.naoDeveIncluirSemCampoObrigatorio] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-19 08:24:35,943 [Worker-382: Launching ProjectTests.naoDeveIncluirSemCampoObrigatorio] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-19 08:24:35,944 [Worker-382: Launching ProjectTests.naoDeveIncluirSemCampoObrigatorio] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource

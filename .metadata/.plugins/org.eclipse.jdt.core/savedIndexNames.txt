@@ -23,5 +23,4 @@ INDEX VERSION 1.131+C:\Users\igor.dantas\Cursos\CursoRestAssured\.metadata\.plug
 4075360006.index
 1920383820.index
 2515469464.index
-572609709.index
 2552884147.index
