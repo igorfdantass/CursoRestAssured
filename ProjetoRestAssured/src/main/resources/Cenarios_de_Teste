@@ -5,7 +5,6 @@ Dados para login:
 	Senha - projeto123
 	
 
-
 *Cenários criados a partir dos critérios propostos
 
 Critério 1: Não deve permitir acessar a API sem token
@@ -39,11 +38,11 @@ Critério 5: Deve inserir movimentação com sucesso
 		data_pagamento (dd/MM/YYYY)
 		valor (0.00f)
 		status -> true | false	
-	cen_6: inserção com tipo DESP e status true
-	cen_7: inserção com tipo REC e status false
-	cen_8: inserção com tipo diferente de DESP | REC
-	cen_9: inserção com valor int
-	cen_10: inserção com data_transacao e data_pagamento inválidos	
+	cen_6: inserção com tipo DESP e status false
+	cen_7: inserção com tipo REC e status true
+	cen_8: inserção com tipo diferente de DESP | REC -> Fora de escopo (irelevante)
+	cen_9: inserção com valor int -> Fora de escopo (irelevante)
+	cen_10: inserção com data_transacao e data_pagamento inválidos	Formato inválido | Data futura
 Critério 6: Deve validar campos obrigatórios na movimentação	
 	post -> /transações
 	cen_11: requisição vazia
@@ -61,7 +60,7 @@ Critério 9: Deve calcular saldo Contas
 	cen_16: saldo com 1 conta com movimentação
 	cen_17: saldo com 1 conta sem movimentação
 	cen_18: saldo com 2 contas com movimentação em ambas
-	cen_19: saldo com 1 conta com movimentação e outra sem movimentação
+	cen_19: saldo com 1 conta com movimentação e outra sem movimentação -> o cen_16 já contempla
 Critério 10: Deve permitir remover movimentações de contas	
 	delete -> /transacoes/$id
 	cen_20: remoção de transações com sucesso
