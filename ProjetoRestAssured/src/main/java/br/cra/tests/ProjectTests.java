@@ -4,28 +4,35 @@ import static br.cra.tests.TipoMovimentacao.*;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import br.cra.core.BaseTest;
+import io.restassured.response.ValidatableResponse;
+import io.restassured.specification.RequestSpecification;
 
 public class ProjectTests extends BaseTest {
 	private String TOKEN;
 	private Integer CONTA_ID; 
+	private Integer MOV_ID;
 
 	@Before
 	public void Before() {
 		coletaToken();
+		System.out.println("Passou aqui");
 		criaConta("contaPadrão");
 		
 	}
 	
-	/*
-	 * @After private void After() { removeContas(); }
-	 */
+	 @After private void After() { 	 
+		 removeConta(CONTA_ID);  
+	}
+	
 	
 	
 	/*
@@ -45,6 +52,7 @@ public class ProjectTests extends BaseTest {
 		Map<String, String> login = new HashMap<String, String>();
 		login.put("email", "igor@projeto");
 		login.put("senha", "projeto123");
+		
 		TOKEN = 
 				given()
 					.body(login)
@@ -68,8 +76,64 @@ public class ProjectTests extends BaseTest {
 					.body("nome", is(novaConta.getNome()))
 					.extract().path("id");
 		
-	}	
-
+	}
+	
+	private Movimentacoes criaMovimentacao(TipoMovimentacao tipo, Boolean status) {
+		Movimentacoes mov = new Movimentacoes();
+		mov.setConta_id(CONTA_ID);
+		mov.setData_transacao("19/04/2022");
+		mov.setData_pagamento("20/04/2022");
+		mov.setDescricao("trans1");
+		mov.setEnvolvido("zezin da padaria");
+		mov.setStatus(status);
+		mov.setTipo(tipo);
+		mov.setValor(100f);
+		
+		return mov;
+		
+	}
+	
+	private void enviaMovimentacao(Movimentacoes mov) {
+		MOV_ID = 
+				given()
+					.header("Authorization", "JWT " + TOKEN)
+					.body(mov)
+				.when()
+					.post("/transacoes")
+				.then()
+					.statusCode(201)
+					.body("tipo", is(""+mov.getTipo()))
+					.body("status", is(mov.getStatus()))
+					.extract().path("id");
+	}
+	
+	private void removeConta(Integer conta_id) {
+		given()
+		.header("Authorization", "JWT " + TOKEN)
+		.pathParam("contaID", conta_id)
+		.when()
+		.delete("/contas/{contaID}")
+		.then()
+		.statusCode(204);
+	}
+	
+	private Boolean temTransacoes() {
+		ArrayList<Object> lista =
+			 given()
+				.header("Authorization", "JWT " + TOKEN)
+			.when()
+				.get("/saldo")
+			.then()
+				.statusCode(200)
+				.extract().path("");
+		return lista.size() != 0;
+	}
+	
+	
+	
+	
+	
+	
 	@Test
 	public void falhaAoAcessarSemToken() {
 		given()
@@ -136,7 +200,7 @@ public class ProjectTests extends BaseTest {
 
 	@Test
 	public void naoDeveIncluirContaRepetida() {
-		Conta conta = new Conta("conta1");
+		Conta conta = new Conta("contaPadrão");
 		given()
 			.header("Authorization", "JWT " + TOKEN)
 			.body(conta)
@@ -149,52 +213,15 @@ public class ProjectTests extends BaseTest {
 	
 	@Test
 	public void deveInserirMovimentacaoDespesaStatusFalse() {
-		Movimentacoes mov = new Movimentacoes();
-		mov.setConta_id(CONTA_ID);
-		mov.setData_transacao("19/04/2022");
-		mov.setData_pagamento("20/04/2022");
-		mov.setDescricao("trans1");
-		mov.setEnvolvido("zezin da padaria");
-		mov.setStatus(false);
-		mov.setTipo(DESP);
-		mov.setValor(100f);
-		
-		given()
-			.header("Authorization", "JWT " + TOKEN)
-			.body(mov)
-		.when()
-			.post("/transacoes")
-		.then()
-			.statusCode(201)
-			.log().all()
-			.body("tipo", is("DESP"))
-			.body("status", is(false))
-			;
+		Movimentacoes mov = criaMovimentacao(DESP, false);
+		enviaMovimentacao(mov);
+				
 	}
 	
 	@Test
 	public void deveInserirMovimentacaoReceitaStatusTrue() {
-		Movimentacoes mov = new Movimentacoes();
-		mov.setConta_id(CONTA_ID);
-		mov.setData_transacao("20/04/2022");
-		mov.setData_pagamento("21/04/2022");
-		mov.setDescricao("trans2");
-		mov.setEnvolvido("zezin da padaria");
-		mov.setStatus(true);
-		mov.setTipo(REC);
-		mov.setValor(200f);
-		
-		given()
-			.header("Authorization", "JWT " + TOKEN)
-			.body(mov)
-		.when()
-			.post("/transacoes")
-		.then()
-			.statusCode(201)
-			.body("tipo", is("REC"))
-			.body("status", is(true))
-			.log().all()
-			;
+		Movimentacoes mov = criaMovimentacao(REC, true);
+		enviaMovimentacao(mov);
 	}
 	
 	@Test
@@ -227,7 +254,6 @@ public class ProjectTests extends BaseTest {
 	@Test
 	public void naoDeveInserirMovimentacaoVazia() {
 		Movimentacoes mov = new Movimentacoes();
-			
 		given()
 			.header("Authorization", "JWT " + TOKEN)
 			.body(mov)
@@ -249,8 +275,14 @@ public class ProjectTests extends BaseTest {
 	}
 	
 	@Test
+	public void deveRemoverConta() {
+		removeConta(CONTA_ID);
+	}
+	
+	@Test
 	public void naoDeveRemoverContaComMovimentacoes() {
-		deveInserirMovimentacaoReceitaStatusTrue();
+		enviaMovimentacao(criaMovimentacao(REC, true));
+		
 		given()
 			.header("Authorization", "JWT " + TOKEN)
 			.pathParam("contaID", CONTA_ID)
@@ -262,16 +294,6 @@ public class ProjectTests extends BaseTest {
 			.body("constraint", is("transacoes_conta_id_foreign"));
 	}
 	
-	@Test
-	public void deveRemoverConta() {
-		given()
-			.header("Authorization", "JWT " + TOKEN)
-			.pathParam("contaID", CONTA_ID)
-		.when()
-			.delete("/contas/{contaID}")
-		.then()
-			.statusCode(204);
-	}
 	
 	@Test
 	public void naoDeveRemoverContaInexistente() {
@@ -286,8 +308,8 @@ public class ProjectTests extends BaseTest {
 	
 	@Test
 	public void deveCalcularSaldoComUmaMovimentacaoEmUmaConta() {
-		criaConta("contaComMovimentação");
-		deveInserirMovimentacaoReceitaStatusTrue();
+		//criaConta("contaComMovimentação");
+		enviaMovimentacao(criaMovimentacao(REC, true));
 		given()
 			.header("Authorization", "JWT " + TOKEN)
 		.when()
@@ -329,9 +351,9 @@ public class ProjectTests extends BaseTest {
 		deveInserirMovimentacaoReceitaStatusTrue();
 		given()
 			.header("Authorization", "JWT " + TOKEN)
-			.pathParam("contaID", CONTA_ID)
+			.pathParam("mov_id", MOV_ID)
 		.when()
-			.delete("/transacoes/{contaID}")
+			.delete("/transacoes/{mov_id}")
 		.then()
 			.statusCode(204);
 	}

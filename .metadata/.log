@@ -15468,3 +15468,3236 @@ java.lang.IllegalArgumentException
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2022-04-21 17:33:44.568
 !MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2022-04-25 10:21:26.229
+!MESSAGE Using unsafe http transport to retrieve http://download.eclipse.org/webtools/repository/2021-09/, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2022-04-25 10:21:47.460
+!MESSAGE Using unsafe http transport to retrieve http://download.eclipse.org/webtools/repository/2021-09/, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-04-25 19:12:08.492
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-04-25 19:12:08.495
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-04-25 19:18:42.162
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-04-25 19:18:42.165
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-04-25 19:21:26.574
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-04-25 19:21:26.604
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-04-25 19:22:51.732
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-04-25 19:22:51.736
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-04-25 19:24:00.095
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-04-25 19:24:00.101
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-04-25 19:28:37.830
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-04-25 19:28:37.833
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-04-25 19:30:22.157
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-04-25 19:30:22.161
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-04-25 19:32:51.382
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-04-25 19:32:51.386
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-04-25 19:37:18.652
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-04-25 19:37:18.655
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-04-25 19:39:43.099
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-04-25 19:39:43.102
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-04-25 19:48:35.365
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-04-25 19:48:35.368
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.jdt.core 4 4 2022-04-25 19:52:28.475
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package br.cra.tests;
+
+import static br.cra.tests.TipoMovimentacao.*;
+import static io.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.*;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import br.cra.core.BaseTest;
+import io.restassured.specification.RequestSpecification;
+
+public class ProjectTests extends BaseTest {
+	private String TOKEN;
+	private Integer CONTA_ID; 
+	private Integer MOV_ID;
+
+	@Before
+	public void Before() {
+		coletaToken();
+		criaConta("contaPadrão");
+		
+	}
+	
+	@After
+	public void listaContas() { 
+		ArrayList<Object> listaContasAtivas = 
+				given().header("Authorization", "JWT " + TOKEN).when().get("/contas").then().extract().path("");
+		System.out.println("0"+listaContasAtivas);
+		deveRemoverTransacao();
+		ArrayList<Object> listaContasAtivas1 = 
+				given().header("Authorization", "JWT " + TOKEN).when().get("/contas").then().extract().path("");
+		System.out.println("1" + listaContasAtivas1);
+		deveRemoverConta();
+		ArrayList<Object> listaContasAtivas2 = 
+				given().header("Authorization", "JWT " + TOKEN).when().get("/contas").then().extract().path("");
+		System.out.println("2" + listaContasAtivas2);
+		
+	}
+	
+	/*
+	 * @After private void After() { removeContas(); }
+	 */
+	
+	
+	/*
+	 * private void removeContas() { ArrayList<Object> lst = listaContas();
+	 * while(lst.ha)
+	 * 
+	 * }
+	 */
+
+	/*
+	 * private ArrayList<Object> listaContas() { ArrayList<Object> listaContas =
+	 * given() .header("Authorization", "JWT " + TOKEN) .when() .get("/contas")
+	 * .then() .statusCode(200) .extract().path(""); return listaContas; }
+	 */
+	
+	private void coletaToken() {
+		Map<String, String> login = new HashMap<String, String>();
+		login.put("email", "igor@projeto");
+		login.put("senha", "projeto123");
+		
+		TOKEN = 
+				given()
+					.body(login)
+				.when()
+					.post("/signin")
+				.then()
+					.statusCode(200)
+					.extract().path("token")
+					;
+	}
+	
+	private void criaConta(String nome) {
+		Conta novaConta = new Conta(nome);
+		CONTA_ID =  given()
+					.header("Authorization", "JWT " + TOKEN)
+					.body(novaConta)
+				.when()
+					.post("/contas")
+				.then()
+					.statusCode(201)
+					.body("nome", is(novaConta.getNome()))
+					.extract().path("id");
+		
+	}
+	
+	private void insereMovimentacao() 
+	
+	@Test
+	public void falhaAoAcessarSemToken() {
+		given()
+		.when()	
+			.get("/contas")
+		.then()
+			.statusCode(401);
+	}
+
+	@Test
+	public void deveAcessarComToken() {
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+		.when()
+			.get("/contas")
+		.then()
+			.statusCode(200);
+	}
+
+	@Test
+	public void deveIncluirConta() {
+		criaConta("contaTest");
+	}
+
+	@Test
+	public void naoDeveIncluirSemCampoObrigatorio() {
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.body("{ \"\": \"\" }")
+		.when()
+			.post("/contas")
+		.then()
+			.statusCode(400).body("msg[0]", is("Nome é um campo obrigatório"));
+	}
+
+	@Test
+	public void deveAlterarConta() {
+		Conta conta = new Conta("conta1_alterada");
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("id", CONTA_ID)
+			.body(conta)
+		.when()
+			.put("/contas/{id}")
+		.then()
+			.log().all()
+			.statusCode(200)
+			.body("nome", is("conta1_alterada"));
+	}
+	
+	@Test
+	public void naoDeveAlterarContaInexistente() {				
+		Conta conta = new Conta("NOMEQUALQUER");
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("id", "00000")
+			.body(conta)
+		.when()
+			.put("/contas/{id}")
+		.then()
+			.log().all()
+			.statusCode(404);
+	}
+
+	@Test
+	public void naoDeveIncluirContaRepetida() {
+		Conta conta = new Conta("conta1");
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.body(conta)
+		.when()
+			.post("/contas")
+		.then()
+			.statusCode(400)
+			.body("error", is("Já existe uma conta com esse nome!"));;
+	}
+	
+	@Test
+	public void deveInserirMovimentacaoDespesaStatusFalse() {
+		Movimentacoes mov = new Movimentacoes();
+		mov.setConta_id(CONTA_ID);
+		mov.setData_transacao("19/04/2022");
+		mov.setData_pagamento("20/04/2022");
+		mov.setDescricao("trans1");
+		mov.setEnvolvido("zezin da padaria");
+		mov.setStatus(false);
+		mov.setTipo(DESP);
+		mov.setValor(100f);
+		
+		MOV_ID = 
+			given()
+				.header("Authorization", "JWT " + TOKEN)
+				.body(mov)
+			.when()
+				.post("/transacoes")
+			.then()
+				.statusCode(201)
+				.log().all()
+				.body("tipo", is("DESP"))
+				.body("status", is(false))
+				.log().all().extract().path("id");
+				
+	}
+	
+	@Test
+	public void deveInserirMovimentacaoReceitaStatusTrue() {
+		Movimentacoes mov = new Movimentacoes();
+		mov.setConta_id(CONTA_ID);
+		mov.setData_transacao("20/04/2022");
+		mov.setData_pagamento("21/04/2022");
+		mov.setDescricao("trans2");
+		mov.setEnvolvido("zezin da padaria");
+		mov.setStatus(true);
+		mov.setTipo(REC);
+		mov.setValor(200f);
+		
+		MOV_ID = 
+			given()
+				.header("Authorization", "JWT " + TOKEN)
+				.body(mov)
+			.when()
+				.post("/transacoes")
+			.then()
+				.statusCode(201)
+				.body("tipo", is("REC"))
+				.body("status", is(true))
+				.log().all().extract().path("id");
+	}
+	
+	@Test
+	public void naoDeveInserirMovimentacaoComDatasInvalidas() {
+		Movimentacoes mov = new Movimentacoes();
+		mov.setConta_id(CONTA_ID);
+		mov.setData_transacao("20/04/2028");
+		mov.setData_pagamento("25042028");
+		mov.setDescricao("trans2");
+		mov.setEnvolvido("zezin da padaria");
+		mov.setStatus(true);
+		mov.setTipo(REC);
+		mov.setValor(200f);
+		
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.body(mov)
+		.when()
+			.post("/transacoes")
+		.then()
+			.statusCode(400)
+			.log().all()
+			.body("", hasSize(2))
+			.body("param[0]", is("data_transacao"))
+			.body("msg[0]", is("Data da Movimentação deve ser menor ou igual à data atual"))
+			.body("param[1]", is("data_pagamento"))
+			.body("msg[1]", is("Data do pagamento inválida (DD/MM/YYYY)"));
+	}
+	
+	@Test
+	public void naoDeveInserirMovimentacaoVazia() {
+		Movimentacoes mov = new Movimentacoes();
+			
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.body(mov)
+		.when()
+			.post("/transacoes")
+		.then()
+			.statusCode(400)
+			.body("", hasSize(8))
+			.body("msg", hasItems(
+					"Data da Movimentação é obrigatório",
+					"Data do pagamento é obrigatório",
+					"Descrição é obrigatório",
+					"Interessado é obrigatório",
+					"Valor é obrigatório",
+					"Valor deve ser um número",
+					"Conta é obrigatório",
+					"Situação é obrigatório"
+					));
+	}
+	
+	@Test
+	public void naoDeveRemoverContaComMovimentacoes() {
+		deveInserirMovimentacaoReceitaStatusTrue();
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("contaID", CONTA_ID)
+		.when()
+			.delete("/contas/{contaID}")
+		.then()
+			.statusCode(500)
+			.log().all()
+			.body("constraint", is("transacoes_conta_id_foreign"));
+	}
+	
+	@Test
+	public void deveRemoverConta() {
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("contaID", CONTA_ID)
+		.when()
+			.delete("/contas/{contaID}")
+		.then()
+			.statusCode(204);
+	}
+	
+	@Test
+	public void naoDeveRemoverContaInexistente() {
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("contaID", 00000)
+		.when()
+			.delete("/contas/{contaID}")
+		.then()
+			.statusCode(404);
+	}
+	
+	@Test
+	public void deveCalcularSaldoComUmaMovimentacaoEmUmaConta() {
+		//criaConta("contaComMovimentação");
+		deveInserirMovimentacaoReceitaStatusTrue();
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+		.when()
+			.get("/saldo")
+		.then()
+			.statusCode(200)
+			.body("", hasSize(1))
+			.body("saldo.findAll{it = 200.00}.size()", is(1));
+	}
+	
+	@Test
+	public void deveCalcularSaldoComUmaMovimentacaoEmMaisDeUmaConta() {
+		deveInserirMovimentacaoReceitaStatusTrue();
+		criaConta("contaComMovimentação");
+		deveInserirMovimentacaoReceitaStatusTrue();
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+		.when()
+			.get("/saldo")
+		.then()
+			.statusCode(200)
+			.body("", hasSize(2))
+			.body("saldo.findAll{it = 200.00}.size()", is(2));
+	}
+	
+	@Test
+	public void naoDeveCalcularSaldoSemMovimentacoes() {
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+		.when()
+			.get("/saldo")
+		.then()
+			.statusCode(200)
+			.body("", hasSize(0));
+	}
+	
+	@Test
+	public void deveRemoverTransacao() {
+		deveInserirMovimentacaoReceitaStatusTrue();
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("mov_id", MOV_ID)
+		.when()
+			.delete("/transacoes/{mov_id}")
+		.then()
+			.statusCode(204);
+	}
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:738)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2022-04-25 19:52:28.476
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:738)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2022-04-25 19:52:28.477
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:738)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.core 4 4 2022-04-25 20:03:38.300
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package br.cra.tests;
+
+import static br.cra.tests.TipoMovimentacao.*;
+import static io.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.*;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import br.cra.core.BaseTest;
+import io.restassured.specification.RequestSpecification;
+
+public class ProjectTests extends BaseTest {
+	private String TOKEN;
+	private Integer CONTA_ID; 
+	private Integer MOV_ID;
+
+	@Before
+	public void Before() {
+		coletaToken();
+		criaConta("contaPadrão");
+		
+	}
+	
+	@After
+	public void listaContas() { 
+		ArrayList<Object> listaContasAtivas = 
+				given().header("Authorization", "JWT " + TOKEN).when().get("/contas").then().extract().path("");
+		System.out.println("0"+listaContasAtivas);
+		deveRemoverTransacao();
+		ArrayList<Object> listaContasAtivas1 = 
+				given().header("Authorization", "JWT " + TOKEN).when().get("/contas").then().extract().path("");
+		System.out.println("1" + listaContasAtivas1);
+		deveRemoverConta();
+		ArrayList<Object> listaContasAtivas2 = 
+				given().header("Authorization", "JWT " + TOKEN).when().get("/contas").then().extract().path("");
+		System.out.println("2" + listaContasAtivas2);
+		
+	}
+	
+	/*
+	 * @After private void After() { removeContas(); }
+	 */
+	
+	
+	/*
+	 * private void removeContas() { ArrayList<Object> lst = listaContas();
+	 * while(lst.ha)
+	 * 
+	 * }
+	 */
+
+	/*
+	 * private ArrayList<Object> listaContas() { ArrayList<Object> listaContas =
+	 * given() .header("Authorization", "JWT " + TOKEN) .when() .get("/contas")
+	 * .then() .statusCode(200) .extract().path(""); return listaContas; }
+	 */
+	
+	private void coletaToken() {
+		Map<String, String> login = new HashMap<String, String>();
+		login.put("email", "igor@projeto");
+		login.put("senha", "projeto123");
+		
+		TOKEN = 
+				given()
+					.body(login)
+				.when()
+					.post("/signin")
+				.then()
+					.statusCode(200)
+					.extract().path("token")
+					;
+	}
+	
+	private void criaConta(String nome) {
+		Conta novaConta = new Conta(nome);
+		CONTA_ID =  given()
+					.header("Authorization", "JWT " + TOKEN)
+					.body(novaConta)
+				.when()
+					.post("/contas")
+				.then()
+					.statusCode(201)
+					.body("nome", is(novaConta.getNome()))
+					.extract().path("id");
+		
+	}
+	
+	private Movimentacoes criaMovimentacao(TipoMovimentacao tipo, Boolean status) {
+		Movimentacoes mov = new Movimentacoes();
+		mov.setConta_id(CONTA_ID);
+		mov.setData_transacao("19/04/2022");
+		mov.setData_pagamento("20/04/2022");
+		mov.setDescricao("trans1");
+		mov.setEnvolvido("zezin da padaria");
+		mov.setStatus(status);
+		mov.setTipo(tipo);
+		mov.setValor(100f);
+		
+		return mov;
+		
+	}
+	
+	private Movimentacoes enviaMovimentacao(M) {
+	
+	@Test
+	public void falhaAoAcessarSemToken() {
+		given()
+		.when()	
+			.get("/contas")
+		.then()
+			.statusCode(401);
+	}
+
+	@Test
+	public void deveAcessarComToken() {
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+		.when()
+			.get("/contas")
+		.then()
+			.statusCode(200);
+	}
+
+	@Test
+	public void deveIncluirConta() {
+		criaConta("contaTest");
+	}
+
+	@Test
+	public void naoDeveIncluirSemCampoObrigatorio() {
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.body("{ \"\": \"\" }")
+		.when()
+			.post("/contas")
+		.then()
+			.statusCode(400).body("msg[0]", is("Nome é um campo obrigatório"));
+	}
+
+	@Test
+	public void deveAlterarConta() {
+		Conta conta = new Conta("conta1_alterada");
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("id", CONTA_ID)
+			.body(conta)
+		.when()
+			.put("/contas/{id}")
+		.then()
+			.log().all()
+			.statusCode(200)
+			.body("nome", is("conta1_alterada"));
+	}
+	
+	@Test
+	public void naoDeveAlterarContaInexistente() {				
+		Conta conta = new Conta("NOMEQUALQUER");
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("id", "00000")
+			.body(conta)
+		.when()
+			.put("/contas/{id}")
+		.then()
+			.log().all()
+			.statusCode(404);
+	}
+
+	@Test
+	public void naoDeveIncluirContaRepetida() {
+		Conta conta = new Conta("contaPadrão");
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.body(conta)
+		.when()
+			.post("/contas")
+		.then()
+			.statusCode(400)
+			.body("error", is("Já existe uma conta com esse nome!"));;
+	}
+	
+	@Test
+	public void deveInserirMovimentacaoDespesaStatusFalse() {
+		Movimentacoes mov = criaMovimentacao(DESP, false);
+		MOV_ID = 
+			given()
+				.header("Authorization", "JWT " + TOKEN)
+				.body(mov)
+			.when()
+				.post("/transacoes")
+			.then()
+				.statusCode(201)
+				.log().all()
+				.body("tipo", is("DESP"))
+				.body("status", is(false))
+				.log().all().extract().path("id");
+				
+	}
+	
+	@Test
+	public void deveInserirMovimentacaoReceitaStatusTrue() {
+		Movimentacoes mov = criaMovimentacao(REC, true);
+		MOV_ID = 
+			given()
+				.header("Authorization", "JWT " + TOKEN)
+				.body(mov)
+			.when()
+				.post("/transacoes")
+			.then()
+				.statusCode(201)
+				.body("tipo", is("REC"))
+				.body("status", is(true))
+				.log().all().extract().path("id");
+	}
+	
+	@Test
+	public void naoDeveInserirMovimentacaoComDatasInvalidas() {
+		Movimentacoes mov = new Movimentacoes();
+		mov.setConta_id(CONTA_ID);
+		mov.setData_transacao("20/04/2028");
+		mov.setData_pagamento("25042028");
+		mov.setDescricao("trans2");
+		mov.setEnvolvido("zezin da padaria");
+		mov.setStatus(true);
+		mov.setTipo(REC);
+		mov.setValor(200f);
+		
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.body(mov)
+		.when()
+			.post("/transacoes")
+		.then()
+			.statusCode(400)
+			.log().all()
+			.body("", hasSize(2))
+			.body("param[0]", is("data_transacao"))
+			.body("msg[0]", is("Data da Movimentação deve ser menor ou igual à data atual"))
+			.body("param[1]", is("data_pagamento"))
+			.body("msg[1]", is("Data do pagamento inválida (DD/MM/YYYY)"));
+	}
+	
+	@Test
+	public void naoDeveInserirMovimentacaoVazia() {
+		Movimentacoes mov = new Movimentacoes();
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.body(mov)
+		.when()
+			.post("/transacoes")
+		.then()
+			.statusCode(400)
+			.body("", hasSize(8))
+			.body("msg", hasItems(
+					"Data da Movimentação é obrigatório",
+					"Data do pagamento é obrigatório",
+					"Descrição é obrigatório",
+					"Interessado é obrigatório",
+					"Valor é obrigatório",
+					"Valor deve ser um número",
+					"Conta é obrigatório",
+					"Situação é obrigatório"
+					));
+	}
+	
+	@Test
+	public void naoDeveRemoverContaComMovimentacoes() {
+		deveInserirMovimentacaoReceitaStatusTrue();
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("contaID", CONTA_ID)
+		.when()
+			.delete("/contas/{contaID}")
+		.then()
+			.statusCode(500)
+			.log().all()
+			.body("constraint", is("transacoes_conta_id_foreign"));
+	}
+	
+	@Test
+	public void deveRemoverConta() {
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("contaID", CONTA_ID)
+		.when()
+			.delete("/contas/{contaID}")
+		.then()
+			.statusCode(204);
+	}
+	
+	@Test
+	public void naoDeveRemoverContaInexistente() {
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("contaID", 00000)
+		.when()
+			.delete("/contas/{contaID}")
+		.then()
+			.statusCode(404);
+	}
+	
+	@Test
+	public void deveCalcularSaldoComUmaMovimentacaoEmUmaConta() {
+		//criaConta("contaComMovimentação");
+		deveInserirMovimentacaoReceitaStatusTrue();
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+		.when()
+			.get("/saldo")
+		.then()
+			.statusCode(200)
+			.body("", hasSize(1))
+			.body("saldo.findAll{it = 200.00}.size()", is(1));
+	}
+	
+	@Test
+	public void deveCalcularSaldoComUmaMovimentacaoEmMaisDeUmaConta() {
+		deveInserirMovimentacaoReceitaStatusTrue();
+		criaConta("contaComMovimentação");
+		deveInserirMovimentacaoReceitaStatusTrue();
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+		.when()
+			.get("/saldo")
+		.then()
+			.statusCode(200)
+			.body("", hasSize(2))
+			.body("saldo.findAll{it = 200.00}.size()", is(2));
+	}
+	
+	@Test
+	public void naoDeveCalcularSaldoSemMovimentacoes() {
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+		.when()
+			.get("/saldo")
+		.then()
+			.statusCode(200)
+			.body("", hasSize(0));
+	}
+	
+	@Test
+	public void deveRemoverTransacao() {
+		deveInserirMovimentacaoReceitaStatusTrue();
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("mov_id", MOV_ID)
+		.when()
+			.delete("/transacoes/{mov_id}")
+		.then()
+			.statusCode(204);
+	}
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:725)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2022-04-25 20:03:38.301
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:725)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2022-04-25 20:03:38.301
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:725)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.core 4 4 2022-04-25 20:03:40.344
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package br.cra.tests;
+
+import static br.cra.tests.TipoMovimentacao.*;
+import static io.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.*;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import br.cra.core.BaseTest;
+import io.restassured.specification.RequestSpecification;
+
+public class ProjectTests extends BaseTest {
+	private String TOKEN;
+	private Integer CONTA_ID; 
+	private Integer MOV_ID;
+
+	@Before
+	public void Before() {
+		coletaToken();
+		criaConta("contaPadrão");
+		
+	}
+	
+	@After
+	public void listaContas() { 
+		ArrayList<Object> listaContasAtivas = 
+				given().header("Authorization", "JWT " + TOKEN).when().get("/contas").then().extract().path("");
+		System.out.println("0"+listaContasAtivas);
+		deveRemoverTransacao();
+		ArrayList<Object> listaContasAtivas1 = 
+				given().header("Authorization", "JWT " + TOKEN).when().get("/contas").then().extract().path("");
+		System.out.println("1" + listaContasAtivas1);
+		deveRemoverConta();
+		ArrayList<Object> listaContasAtivas2 = 
+				given().header("Authorization", "JWT " + TOKEN).when().get("/contas").then().extract().path("");
+		System.out.println("2" + listaContasAtivas2);
+		
+	}
+	
+	/*
+	 * @After private void After() { removeContas(); }
+	 */
+	
+	
+	/*
+	 * private void removeContas() { ArrayList<Object> lst = listaContas();
+	 * while(lst.ha)
+	 * 
+	 * }
+	 */
+
+	/*
+	 * private ArrayList<Object> listaContas() { ArrayList<Object> listaContas =
+	 * given() .header("Authorization", "JWT " + TOKEN) .when() .get("/contas")
+	 * .then() .statusCode(200) .extract().path(""); return listaContas; }
+	 */
+	
+	private void coletaToken() {
+		Map<String, String> login = new HashMap<String, String>();
+		login.put("email", "igor@projeto");
+		login.put("senha", "projeto123");
+		
+		TOKEN = 
+				given()
+					.body(login)
+				.when()
+					.post("/signin")
+				.then()
+					.statusCode(200)
+					.extract().path("token")
+					;
+	}
+	
+	private void criaConta(String nome) {
+		Conta novaConta = new Conta(nome);
+		CONTA_ID =  given()
+					.header("Authorization", "JWT " + TOKEN)
+					.body(novaConta)
+				.when()
+					.post("/contas")
+				.then()
+					.statusCode(201)
+					.body("nome", is(novaConta.getNome()))
+					.extract().path("id");
+		
+	}
+	
+	private Movimentacoes criaMovimentacao(TipoMovimentacao tipo, Boolean status) {
+		Movimentacoes mov = new Movimentacoes();
+		mov.setConta_id(CONTA_ID);
+		mov.setData_transacao("19/04/2022");
+		mov.setData_pagamento("20/04/2022");
+		mov.setDescricao("trans1");
+		mov.setEnvolvido("zezin da padaria");
+		mov.setStatus(status);
+		mov.setTipo(tipo);
+		mov.setValor(100f);
+		
+		return mov;
+		
+	}
+	
+	private Movimentacoes enviaMovimentacao(Moviment) {
+	
+	@Test
+	public void falhaAoAcessarSemToken() {
+		given()
+		.when()	
+			.get("/contas")
+		.then()
+			.statusCode(401);
+	}
+
+	@Test
+	public void deveAcessarComToken() {
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+		.when()
+			.get("/contas")
+		.then()
+			.statusCode(200);
+	}
+
+	@Test
+	public void deveIncluirConta() {
+		criaConta("contaTest");
+	}
+
+	@Test
+	public void naoDeveIncluirSemCampoObrigatorio() {
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.body("{ \"\": \"\" }")
+		.when()
+			.post("/contas")
+		.then()
+			.statusCode(400).body("msg[0]", is("Nome é um campo obrigatório"));
+	}
+
+	@Test
+	public void deveAlterarConta() {
+		Conta conta = new Conta("conta1_alterada");
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("id", CONTA_ID)
+			.body(conta)
+		.when()
+			.put("/contas/{id}")
+		.then()
+			.log().all()
+			.statusCode(200)
+			.body("nome", is("conta1_alterada"));
+	}
+	
+	@Test
+	public void naoDeveAlterarContaInexistente() {				
+		Conta conta = new Conta("NOMEQUALQUER");
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("id", "00000")
+			.body(conta)
+		.when()
+			.put("/contas/{id}")
+		.then()
+			.log().all()
+			.statusCode(404);
+	}
+
+	@Test
+	public void naoDeveIncluirContaRepetida() {
+		Conta conta = new Conta("contaPadrão");
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.body(conta)
+		.when()
+			.post("/contas")
+		.then()
+			.statusCode(400)
+			.body("error", is("Já existe uma conta com esse nome!"));;
+	}
+	
+	@Test
+	public void deveInserirMovimentacaoDespesaStatusFalse() {
+		Movimentacoes mov = criaMovimentacao(DESP, false);
+		MOV_ID = 
+			given()
+				.header("Authorization", "JWT " + TOKEN)
+				.body(mov)
+			.when()
+				.post("/transacoes")
+			.then()
+				.statusCode(201)
+				.log().all()
+				.body("tipo", is("DESP"))
+				.body("status", is(false))
+				.log().all().extract().path("id");
+				
+	}
+	
+	@Test
+	public void deveInserirMovimentacaoReceitaStatusTrue() {
+		Movimentacoes mov = criaMovimentacao(REC, true);
+		MOV_ID = 
+			given()
+				.header("Authorization", "JWT " + TOKEN)
+				.body(mov)
+			.when()
+				.post("/transacoes")
+			.then()
+				.statusCode(201)
+				.body("tipo", is("REC"))
+				.body("status", is(true))
+				.log().all().extract().path("id");
+	}
+	
+	@Test
+	public void naoDeveInserirMovimentacaoComDatasInvalidas() {
+		Movimentacoes mov = new Movimentacoes();
+		mov.setConta_id(CONTA_ID);
+		mov.setData_transacao("20/04/2028");
+		mov.setData_pagamento("25042028");
+		mov.setDescricao("trans2");
+		mov.setEnvolvido("zezin da padaria");
+		mov.setStatus(true);
+		mov.setTipo(REC);
+		mov.setValor(200f);
+		
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.body(mov)
+		.when()
+			.post("/transacoes")
+		.then()
+			.statusCode(400)
+			.log().all()
+			.body("", hasSize(2))
+			.body("param[0]", is("data_transacao"))
+			.body("msg[0]", is("Data da Movimentação deve ser menor ou igual à data atual"))
+			.body("param[1]", is("data_pagamento"))
+			.body("msg[1]", is("Data do pagamento inválida (DD/MM/YYYY)"));
+	}
+	
+	@Test
+	public void naoDeveInserirMovimentacaoVazia() {
+		Movimentacoes mov = new Movimentacoes();
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.body(mov)
+		.when()
+			.post("/transacoes")
+		.then()
+			.statusCode(400)
+			.body("", hasSize(8))
+			.body("msg", hasItems(
+					"Data da Movimentação é obrigatório",
+					"Data do pagamento é obrigatório",
+					"Descrição é obrigatório",
+					"Interessado é obrigatório",
+					"Valor é obrigatório",
+					"Valor deve ser um número",
+					"Conta é obrigatório",
+					"Situação é obrigatório"
+					));
+	}
+	
+	@Test
+	public void naoDeveRemoverContaComMovimentacoes() {
+		deveInserirMovimentacaoReceitaStatusTrue();
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("contaID", CONTA_ID)
+		.when()
+			.delete("/contas/{contaID}")
+		.then()
+			.statusCode(500)
+			.log().all()
+			.body("constraint", is("transacoes_conta_id_foreign"));
+	}
+	
+	@Test
+	public void deveRemoverConta() {
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("contaID", CONTA_ID)
+		.when()
+			.delete("/contas/{contaID}")
+		.then()
+			.statusCode(204);
+	}
+	
+	@Test
+	public void naoDeveRemoverContaInexistente() {
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("contaID", 00000)
+		.when()
+			.delete("/contas/{contaID}")
+		.then()
+			.statusCode(404);
+	}
+	
+	@Test
+	public void deveCalcularSaldoComUmaMovimentacaoEmUmaConta() {
+		//criaConta("contaComMovimentação");
+		deveInserirMovimentacaoReceitaStatusTrue();
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+		.when()
+			.get("/saldo")
+		.then()
+			.statusCode(200)
+			.body("", hasSize(1))
+			.body("saldo.findAll{it = 200.00}.size()", is(1));
+	}
+	
+	@Test
+	public void deveCalcularSaldoComUmaMovimentacaoEmMaisDeUmaConta() {
+		deveInserirMovimentacaoReceitaStatusTrue();
+		criaConta("contaComMovimentação");
+		deveInserirMovimentacaoReceitaStatusTrue();
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+		.when()
+			.get("/saldo")
+		.then()
+			.statusCode(200)
+			.body("", hasSize(2))
+			.body("saldo.findAll{it = 200.00}.size()", is(2));
+	}
+	
+	@Test
+	public void naoDeveCalcularSaldoSemMovimentacoes() {
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+		.when()
+			.get("/saldo")
+		.then()
+			.statusCode(200)
+			.body("", hasSize(0));
+	}
+	
+	@Test
+	public void deveRemoverTransacao() {
+		deveInserirMovimentacaoReceitaStatusTrue();
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("mov_id", MOV_ID)
+		.when()
+			.delete("/transacoes/{mov_id}")
+		.then()
+			.statusCode(204);
+	}
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:725)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2022-04-25 20:03:40.345
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:725)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2022-04-25 20:03:40.345
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:725)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.core 4 4 2022-04-25 20:03:41.370
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package br.cra.tests;
+
+import static br.cra.tests.TipoMovimentacao.*;
+import static io.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.*;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import br.cra.core.BaseTest;
+import io.restassured.specification.RequestSpecification;
+
+public class ProjectTests extends BaseTest {
+	private String TOKEN;
+	private Integer CONTA_ID; 
+	private Integer MOV_ID;
+
+	@Before
+	public void Before() {
+		coletaToken();
+		criaConta("contaPadrão");
+		
+	}
+	
+	@After
+	public void listaContas() { 
+		ArrayList<Object> listaContasAtivas = 
+				given().header("Authorization", "JWT " + TOKEN).when().get("/contas").then().extract().path("");
+		System.out.println("0"+listaContasAtivas);
+		deveRemoverTransacao();
+		ArrayList<Object> listaContasAtivas1 = 
+				given().header("Authorization", "JWT " + TOKEN).when().get("/contas").then().extract().path("");
+		System.out.println("1" + listaContasAtivas1);
+		deveRemoverConta();
+		ArrayList<Object> listaContasAtivas2 = 
+				given().header("Authorization", "JWT " + TOKEN).when().get("/contas").then().extract().path("");
+		System.out.println("2" + listaContasAtivas2);
+		
+	}
+	
+	/*
+	 * @After private void After() { removeContas(); }
+	 */
+	
+	
+	/*
+	 * private void removeContas() { ArrayList<Object> lst = listaContas();
+	 * while(lst.ha)
+	 * 
+	 * }
+	 */
+
+	/*
+	 * private ArrayList<Object> listaContas() { ArrayList<Object> listaContas =
+	 * given() .header("Authorization", "JWT " + TOKEN) .when() .get("/contas")
+	 * .then() .statusCode(200) .extract().path(""); return listaContas; }
+	 */
+	
+	private void coletaToken() {
+		Map<String, String> login = new HashMap<String, String>();
+		login.put("email", "igor@projeto");
+		login.put("senha", "projeto123");
+		
+		TOKEN = 
+				given()
+					.body(login)
+				.when()
+					.post("/signin")
+				.then()
+					.statusCode(200)
+					.extract().path("token")
+					;
+	}
+	
+	private void criaConta(String nome) {
+		Conta novaConta = new Conta(nome);
+		CONTA_ID =  given()
+					.header("Authorization", "JWT " + TOKEN)
+					.body(novaConta)
+				.when()
+					.post("/contas")
+				.then()
+					.statusCode(201)
+					.body("nome", is(novaConta.getNome()))
+					.extract().path("id");
+		
+	}
+	
+	private Movimentacoes criaMovimentacao(TipoMovimentacao tipo, Boolean status) {
+		Movimentacoes mov = new Movimentacoes();
+		mov.setConta_id(CONTA_ID);
+		mov.setData_transacao("19/04/2022");
+		mov.setData_pagamento("20/04/2022");
+		mov.setDescricao("trans1");
+		mov.setEnvolvido("zezin da padaria");
+		mov.setStatus(status);
+		mov.setTipo(tipo);
+		mov.setValor(100f);
+		
+		return mov;
+		
+	}
+	
+	private Movimentacoes enviaMovimentacao(Movimentacoes) {
+	
+	@Test
+	public void falhaAoAcessarSemToken() {
+		given()
+		.when()	
+			.get("/contas")
+		.then()
+			.statusCode(401);
+	}
+
+	@Test
+	public void deveAcessarComToken() {
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+		.when()
+			.get("/contas")
+		.then()
+			.statusCode(200);
+	}
+
+	@Test
+	public void deveIncluirConta() {
+		criaConta("contaTest");
+	}
+
+	@Test
+	public void naoDeveIncluirSemCampoObrigatorio() {
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.body("{ \"\": \"\" }")
+		.when()
+			.post("/contas")
+		.then()
+			.statusCode(400).body("msg[0]", is("Nome é um campo obrigatório"));
+	}
+
+	@Test
+	public void deveAlterarConta() {
+		Conta conta = new Conta("conta1_alterada");
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("id", CONTA_ID)
+			.body(conta)
+		.when()
+			.put("/contas/{id}")
+		.then()
+			.log().all()
+			.statusCode(200)
+			.body("nome", is("conta1_alterada"));
+	}
+	
+	@Test
+	public void naoDeveAlterarContaInexistente() {				
+		Conta conta = new Conta("NOMEQUALQUER");
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("id", "00000")
+			.body(conta)
+		.when()
+			.put("/contas/{id}")
+		.then()
+			.log().all()
+			.statusCode(404);
+	}
+
+	@Test
+	public void naoDeveIncluirContaRepetida() {
+		Conta conta = new Conta("contaPadrão");
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.body(conta)
+		.when()
+			.post("/contas")
+		.then()
+			.statusCode(400)
+			.body("error", is("Já existe uma conta com esse nome!"));;
+	}
+	
+	@Test
+	public void deveInserirMovimentacaoDespesaStatusFalse() {
+		Movimentacoes mov = criaMovimentacao(DESP, false);
+		MOV_ID = 
+			given()
+				.header("Authorization", "JWT " + TOKEN)
+				.body(mov)
+			.when()
+				.post("/transacoes")
+			.then()
+				.statusCode(201)
+				.log().all()
+				.body("tipo", is("DESP"))
+				.body("status", is(false))
+				.log().all().extract().path("id");
+				
+	}
+	
+	@Test
+	public void deveInserirMovimentacaoReceitaStatusTrue() {
+		Movimentacoes mov = criaMovimentacao(REC, true);
+		MOV_ID = 
+			given()
+				.header("Authorization", "JWT " + TOKEN)
+				.body(mov)
+			.when()
+				.post("/transacoes")
+			.then()
+				.statusCode(201)
+				.body("tipo", is("REC"))
+				.body("status", is(true))
+				.log().all().extract().path("id");
+	}
+	
+	@Test
+	public void naoDeveInserirMovimentacaoComDatasInvalidas() {
+		Movimentacoes mov = new Movimentacoes();
+		mov.setConta_id(CONTA_ID);
+		mov.setData_transacao("20/04/2028");
+		mov.setData_pagamento("25042028");
+		mov.setDescricao("trans2");
+		mov.setEnvolvido("zezin da padaria");
+		mov.setStatus(true);
+		mov.setTipo(REC);
+		mov.setValor(200f);
+		
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.body(mov)
+		.when()
+			.post("/transacoes")
+		.then()
+			.statusCode(400)
+			.log().all()
+			.body("", hasSize(2))
+			.body("param[0]", is("data_transacao"))
+			.body("msg[0]", is("Data da Movimentação deve ser menor ou igual à data atual"))
+			.body("param[1]", is("data_pagamento"))
+			.body("msg[1]", is("Data do pagamento inválida (DD/MM/YYYY)"));
+	}
+	
+	@Test
+	public void naoDeveInserirMovimentacaoVazia() {
+		Movimentacoes mov = new Movimentacoes();
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.body(mov)
+		.when()
+			.post("/transacoes")
+		.then()
+			.statusCode(400)
+			.body("", hasSize(8))
+			.body("msg", hasItems(
+					"Data da Movimentação é obrigatório",
+					"Data do pagamento é obrigatório",
+					"Descrição é obrigatório",
+					"Interessado é obrigatório",
+					"Valor é obrigatório",
+					"Valor deve ser um número",
+					"Conta é obrigatório",
+					"Situação é obrigatório"
+					));
+	}
+	
+	@Test
+	public void naoDeveRemoverContaComMovimentacoes() {
+		deveInserirMovimentacaoReceitaStatusTrue();
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("contaID", CONTA_ID)
+		.when()
+			.delete("/contas/{contaID}")
+		.then()
+			.statusCode(500)
+			.log().all()
+			.body("constraint", is("transacoes_conta_id_foreign"));
+	}
+	
+	@Test
+	public void deveRemoverConta() {
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("contaID", CONTA_ID)
+		.when()
+			.delete("/contas/{contaID}")
+		.then()
+			.statusCode(204);
+	}
+	
+	@Test
+	public void naoDeveRemoverContaInexistente() {
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("contaID", 00000)
+		.when()
+			.delete("/contas/{contaID}")
+		.then()
+			.statusCode(404);
+	}
+	
+	@Test
+	public void deveCalcularSaldoComUmaMovimentacaoEmUmaConta() {
+		//criaConta("contaComMovimentação");
+		deveInserirMovimentacaoReceitaStatusTrue();
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+		.when()
+			.get("/saldo")
+		.then()
+			.statusCode(200)
+			.body("", hasSize(1))
+			.body("saldo.findAll{it = 200.00}.size()", is(1));
+	}
+	
+	@Test
+	public void deveCalcularSaldoComUmaMovimentacaoEmMaisDeUmaConta() {
+		deveInserirMovimentacaoReceitaStatusTrue();
+		criaConta("contaComMovimentação");
+		deveInserirMovimentacaoReceitaStatusTrue();
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+		.when()
+			.get("/saldo")
+		.then()
+			.statusCode(200)
+			.body("", hasSize(2))
+			.body("saldo.findAll{it = 200.00}.size()", is(2));
+	}
+	
+	@Test
+	public void naoDeveCalcularSaldoSemMovimentacoes() {
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+		.when()
+			.get("/saldo")
+		.then()
+			.statusCode(200)
+			.body("", hasSize(0));
+	}
+	
+	@Test
+	public void deveRemoverTransacao() {
+		deveInserirMovimentacaoReceitaStatusTrue();
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("mov_id", MOV_ID)
+		.when()
+			.delete("/transacoes/{mov_id}")
+		.then()
+			.statusCode(204);
+	}
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:725)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2022-04-25 20:03:41.371
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:725)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2022-04-25 20:03:41.371
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:725)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.core 4 4 2022-04-25 20:03:42.395
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package br.cra.tests;
+
+import static br.cra.tests.TipoMovimentacao.*;
+import static io.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.*;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import br.cra.core.BaseTest;
+import io.restassured.specification.RequestSpecification;
+
+public class ProjectTests extends BaseTest {
+	private String TOKEN;
+	private Integer CONTA_ID; 
+	private Integer MOV_ID;
+
+	@Before
+	public void Before() {
+		coletaToken();
+		criaConta("contaPadrão");
+		
+	}
+	
+	@After
+	public void listaContas() { 
+		ArrayList<Object> listaContasAtivas = 
+				given().header("Authorization", "JWT " + TOKEN).when().get("/contas").then().extract().path("");
+		System.out.println("0"+listaContasAtivas);
+		deveRemoverTransacao();
+		ArrayList<Object> listaContasAtivas1 = 
+				given().header("Authorization", "JWT " + TOKEN).when().get("/contas").then().extract().path("");
+		System.out.println("1" + listaContasAtivas1);
+		deveRemoverConta();
+		ArrayList<Object> listaContasAtivas2 = 
+				given().header("Authorization", "JWT " + TOKEN).when().get("/contas").then().extract().path("");
+		System.out.println("2" + listaContasAtivas2);
+		
+	}
+	
+	/*
+	 * @After private void After() { removeContas(); }
+	 */
+	
+	
+	/*
+	 * private void removeContas() { ArrayList<Object> lst = listaContas();
+	 * while(lst.ha)
+	 * 
+	 * }
+	 */
+
+	/*
+	 * private ArrayList<Object> listaContas() { ArrayList<Object> listaContas =
+	 * given() .header("Authorization", "JWT " + TOKEN) .when() .get("/contas")
+	 * .then() .statusCode(200) .extract().path(""); return listaContas; }
+	 */
+	
+	private void coletaToken() {
+		Map<String, String> login = new HashMap<String, String>();
+		login.put("email", "igor@projeto");
+		login.put("senha", "projeto123");
+		
+		TOKEN = 
+				given()
+					.body(login)
+				.when()
+					.post("/signin")
+				.then()
+					.statusCode(200)
+					.extract().path("token")
+					;
+	}
+	
+	private void criaConta(String nome) {
+		Conta novaConta = new Conta(nome);
+		CONTA_ID =  given()
+					.header("Authorization", "JWT " + TOKEN)
+					.body(novaConta)
+				.when()
+					.post("/contas")
+				.then()
+					.statusCode(201)
+					.body("nome", is(novaConta.getNome()))
+					.extract().path("id");
+		
+	}
+	
+	private Movimentacoes criaMovimentacao(TipoMovimentacao tipo, Boolean status) {
+		Movimentacoes mov = new Movimentacoes();
+		mov.setConta_id(CONTA_ID);
+		mov.setData_transacao("19/04/2022");
+		mov.setData_pagamento("20/04/2022");
+		mov.setDescricao("trans1");
+		mov.setEnvolvido("zezin da padaria");
+		mov.setStatus(status);
+		mov.setTipo(tipo);
+		mov.setValor(100f);
+		
+		return mov;
+		
+	}
+	
+	private Movimentacoes enviaMovimentacao(Movimentacoes ) {
+	
+	@Test
+	public void falhaAoAcessarSemToken() {
+		given()
+		.when()	
+			.get("/contas")
+		.then()
+			.statusCode(401);
+	}
+
+	@Test
+	public void deveAcessarComToken() {
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+		.when()
+			.get("/contas")
+		.then()
+			.statusCode(200);
+	}
+
+	@Test
+	public void deveIncluirConta() {
+		criaConta("contaTest");
+	}
+
+	@Test
+	public void naoDeveIncluirSemCampoObrigatorio() {
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.body("{ \"\": \"\" }")
+		.when()
+			.post("/contas")
+		.then()
+			.statusCode(400).body("msg[0]", is("Nome é um campo obrigatório"));
+	}
+
+	@Test
+	public void deveAlterarConta() {
+		Conta conta = new Conta("conta1_alterada");
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("id", CONTA_ID)
+			.body(conta)
+		.when()
+			.put("/contas/{id}")
+		.then()
+			.log().all()
+			.statusCode(200)
+			.body("nome", is("conta1_alterada"));
+	}
+	
+	@Test
+	public void naoDeveAlterarContaInexistente() {				
+		Conta conta = new Conta("NOMEQUALQUER");
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("id", "00000")
+			.body(conta)
+		.when()
+			.put("/contas/{id}")
+		.then()
+			.log().all()
+			.statusCode(404);
+	}
+
+	@Test
+	public void naoDeveIncluirContaRepetida() {
+		Conta conta = new Conta("contaPadrão");
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.body(conta)
+		.when()
+			.post("/contas")
+		.then()
+			.statusCode(400)
+			.body("error", is("Já existe uma conta com esse nome!"));;
+	}
+	
+	@Test
+	public void deveInserirMovimentacaoDespesaStatusFalse() {
+		Movimentacoes mov = criaMovimentacao(DESP, false);
+		MOV_ID = 
+			given()
+				.header("Authorization", "JWT " + TOKEN)
+				.body(mov)
+			.when()
+				.post("/transacoes")
+			.then()
+				.statusCode(201)
+				.log().all()
+				.body("tipo", is("DESP"))
+				.body("status", is(false))
+				.log().all().extract().path("id");
+				
+	}
+	
+	@Test
+	public void deveInserirMovimentacaoReceitaStatusTrue() {
+		Movimentacoes mov = criaMovimentacao(REC, true);
+		MOV_ID = 
+			given()
+				.header("Authorization", "JWT " + TOKEN)
+				.body(mov)
+			.when()
+				.post("/transacoes")
+			.then()
+				.statusCode(201)
+				.body("tipo", is("REC"))
+				.body("status", is(true))
+				.log().all().extract().path("id");
+	}
+	
+	@Test
+	public void naoDeveInserirMovimentacaoComDatasInvalidas() {
+		Movimentacoes mov = new Movimentacoes();
+		mov.setConta_id(CONTA_ID);
+		mov.setData_transacao("20/04/2028");
+		mov.setData_pagamento("25042028");
+		mov.setDescricao("trans2");
+		mov.setEnvolvido("zezin da padaria");
+		mov.setStatus(true);
+		mov.setTipo(REC);
+		mov.setValor(200f);
+		
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.body(mov)
+		.when()
+			.post("/transacoes")
+		.then()
+			.statusCode(400)
+			.log().all()
+			.body("", hasSize(2))
+			.body("param[0]", is("data_transacao"))
+			.body("msg[0]", is("Data da Movimentação deve ser menor ou igual à data atual"))
+			.body("param[1]", is("data_pagamento"))
+			.body("msg[1]", is("Data do pagamento inválida (DD/MM/YYYY)"));
+	}
+	
+	@Test
+	public void naoDeveInserirMovimentacaoVazia() {
+		Movimentacoes mov = new Movimentacoes();
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.body(mov)
+		.when()
+			.post("/transacoes")
+		.then()
+			.statusCode(400)
+			.body("", hasSize(8))
+			.body("msg", hasItems(
+					"Data da Movimentação é obrigatório",
+					"Data do pagamento é obrigatório",
+					"Descrição é obrigatório",
+					"Interessado é obrigatório",
+					"Valor é obrigatório",
+					"Valor deve ser um número",
+					"Conta é obrigatório",
+					"Situação é obrigatório"
+					));
+	}
+	
+	@Test
+	public void naoDeveRemoverContaComMovimentacoes() {
+		deveInserirMovimentacaoReceitaStatusTrue();
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("contaID", CONTA_ID)
+		.when()
+			.delete("/contas/{contaID}")
+		.then()
+			.statusCode(500)
+			.log().all()
+			.body("constraint", is("transacoes_conta_id_foreign"));
+	}
+	
+	@Test
+	public void deveRemoverConta() {
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("contaID", CONTA_ID)
+		.when()
+			.delete("/contas/{contaID}")
+		.then()
+			.statusCode(204);
+	}
+	
+	@Test
+	public void naoDeveRemoverContaInexistente() {
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("contaID", 00000)
+		.when()
+			.delete("/contas/{contaID}")
+		.then()
+			.statusCode(404);
+	}
+	
+	@Test
+	public void deveCalcularSaldoComUmaMovimentacaoEmUmaConta() {
+		//criaConta("contaComMovimentação");
+		deveInserirMovimentacaoReceitaStatusTrue();
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+		.when()
+			.get("/saldo")
+		.then()
+			.statusCode(200)
+			.body("", hasSize(1))
+			.body("saldo.findAll{it = 200.00}.size()", is(1));
+	}
+	
+	@Test
+	public void deveCalcularSaldoComUmaMovimentacaoEmMaisDeUmaConta() {
+		deveInserirMovimentacaoReceitaStatusTrue();
+		criaConta("contaComMovimentação");
+		deveInserirMovimentacaoReceitaStatusTrue();
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+		.when()
+			.get("/saldo")
+		.then()
+			.statusCode(200)
+			.body("", hasSize(2))
+			.body("saldo.findAll{it = 200.00}.size()", is(2));
+	}
+	
+	@Test
+	public void naoDeveCalcularSaldoSemMovimentacoes() {
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+		.when()
+			.get("/saldo")
+		.then()
+			.statusCode(200)
+			.body("", hasSize(0));
+	}
+	
+	@Test
+	public void deveRemoverTransacao() {
+		deveInserirMovimentacaoReceitaStatusTrue();
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("mov_id", MOV_ID)
+		.when()
+			.delete("/transacoes/{mov_id}")
+		.then()
+			.statusCode(204);
+	}
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:725)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2022-04-25 20:03:42.396
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:725)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2022-04-25 20:03:42.396
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:725)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.core 4 4 2022-04-25 20:08:08.599
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package br.cra.tests;
+
+import static br.cra.tests.TipoMovimentacao.*;
+import static io.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.*;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import br.cra.core.BaseTest;
+import io.restassured.specification.RequestSpecification;
+
+public class ProjectTests extends BaseTest {
+	private String TOKEN;
+	private Integer CONTA_ID; 
+	private Integer MOV_ID;
+
+	@Before
+	public void Before() {
+		coletaToken();
+		criaConta("contaPadrão");
+		
+	}
+	
+	@After
+	public void listaContas() { 
+		ArrayList<Object> listaContasAtivas = 
+				given().header("Authorization", "JWT " + TOKEN).when().get("/contas").then().extract().path("");
+		System.out.println("0"+listaContasAtivas);
+		deveRemoverTransacao();
+		ArrayList<Object> listaContasAtivas1 = 
+				given().header("Authorization", "JWT " + TOKEN).when().get("/contas").then().extract().path("");
+		System.out.println("1" + listaContasAtivas1);
+		deveRemoverConta();
+		ArrayList<Object> listaContasAtivas2 = 
+				given().header("Authorization", "JWT " + TOKEN).when().get("/contas").then().extract().path("");
+		System.out.println("2" + listaContasAtivas2);
+		
+	}
+	
+	/*
+	 * @After private void After() { removeContas(); }
+	 */
+	
+	
+	/*
+	 * private void removeContas() { ArrayList<Object> lst = listaContas();
+	 * while(lst.ha)
+	 * 
+	 * }
+	 */
+
+	/*
+	 * private ArrayList<Object> listaContas() { ArrayList<Object> listaContas =
+	 * given() .header("Authorization", "JWT " + TOKEN) .when() .get("/contas")
+	 * .then() .statusCode(200) .extract().path(""); return listaContas; }
+	 */
+	
+	private void coletaToken() {
+		Map<String, String> login = new HashMap<String, String>();
+		login.put("email", "igor@projeto");
+		login.put("senha", "projeto123");
+		
+		TOKEN = 
+				given()
+					.body(login)
+				.when()
+					.post("/signin")
+				.then()
+					.statusCode(200)
+					.extract().path("token")
+					;
+	}
+	
+	private void criaConta(String nome) {
+		Conta novaConta = new Conta(nome);
+		CONTA_ID =  given()
+					.header("Authorization", "JWT " + TOKEN)
+					.body(novaConta)
+				.when()
+					.post("/contas")
+				.then()
+					.statusCode(201)
+					.body("nome", is(novaConta.getNome()))
+					.extract().path("id");
+		
+	}
+	
+	private Movimentacoes criaMovimentacao(TipoMovimentacao tipo, Boolean status) {
+		Movimentacoes mov = new Movimentacoes();
+		mov.setConta_id(CONTA_ID);
+		mov.setData_transacao("19/04/2022");
+		mov.setData_pagamento("20/04/2022");
+		mov.setDescricao("trans1");
+		mov.setEnvolvido("zezin da padaria");
+		mov.setStatus(status);
+		mov.setTipo(tipo);
+		mov.setValor(100f);
+		
+		return mov;
+		
+	}
+	
+	private void enviaMovimentacao(Movimentacoes mov) {
+		MOV_ID = 
+				given()
+					.header("Authorization", "JWT " + TOKEN)
+					.body(mov)
+				.when()
+					.post("/transacoes")
+				.then()
+					.statusCode(201)
+					.body("tipo", is(mov.getTipo()))
+					.body("status", is(mov.getStatus()))
+					.log().all().extract().path("id");
+	}
+	
+	@Test
+	public void falhaAoAcessarSemToken() {
+		given()
+		.when()	
+			.get("/contas")
+		.then()
+			.statusCode(401);
+	}
+
+	@Test
+	public void deveAcessarComToken() {
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+		.when()
+			.get("/contas")
+		.then()
+			.statusCode(200);
+	}
+
+	@Test
+	public void deveIncluirConta() {
+		criaConta("contaTest");
+	}
+
+	@Test
+	public void naoDeveIncluirSemCampoObrigatorio() {
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.body("{ \"\": \"\" }")
+		.when()
+			.post("/contas")
+		.then()
+			.statusCode(400).body("msg[0]", is("Nome é um campo obrigatório"));
+	}
+
+	@Test
+	public void deveAlterarConta() {
+		Conta conta = new Conta("conta1_alterada");
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("id", CONTA_ID)
+			.body(conta)
+		.when()
+			.put("/contas/{id}")
+		.then()
+			.log().all()
+			.statusCode(200)
+			.body("nome", is("conta1_alterada"));
+	}
+	
+	@Test
+	public void naoDeveAlterarContaInexistente() {				
+		Conta conta = new Conta("NOMEQUALQUER");
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("id", "00000")
+			.body(conta)
+		.when()
+			.put("/contas/{id}")
+		.then()
+			.log().all()
+			.statusCode(404);
+	}
+
+	@Test
+	public void naoDeveIncluirContaRepetida() {
+		Conta conta = new Conta("contaPadrão");
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.body(conta)
+		.when()
+			.post("/contas")
+		.then()
+			.statusCode(400)
+			.body("error", is("Já existe uma conta com esse nome!"));;
+	}
+	
+	@Test
+	public void deveInserirMovimentacaoDespesaStatusFalse() {
+		Movimentacoes mov = criaMovimentacao(DESP, false);
+		enviaMovimentacao(mov);
+				
+	}
+	
+	@Test
+	public void deveInserirMovimentacaoReceitaStatusTrue() {
+		Movimentacoes mov = criaMovimentacao(REC, true);
+		enviaMovimentacao(mov);
+	}
+	
+	@Test
+	public void naoDeveInserirMovimentacaoComDatasInvalidas() {
+		Movimentacoes mov = new Movimentacoes();
+		mov.setConta_id(CONTA_ID);
+		mov.setData_transacao("20/04/2028");
+		mov.setData_pagamento("25042028");
+		mov.setDescricao("trans2");
+		mov.setEnvolvido("zezin da padaria");
+		mov.setStatus(true);
+		mov.setTipo(REC);
+		mov.setValor(200f);
+		
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.body(mov)
+		.when()
+			.post("/transacoes")
+		.then()
+			.statusCode(400)
+			.log().all()
+			.body("", hasSize(2))
+			.body("param[0]", is("data_transacao"))
+			.body("msg[0]", is("Data da Movimentação deve ser menor ou igual à data atual"))
+			.body("param[1]", is("data_pagamento"))
+			.body("msg[1]", is("Data do pagamento inválida (DD/MM/YYYY)"));
+	}
+	
+	@Test
+	public void naoDeveInserirMovimentacaoVazia() {
+		Movimentacoes mov = new Movimentacoes();
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.body(mov)
+		.when()
+			.post("/transacoes")
+		.then()
+			.statusCode(400)
+			.body("", hasSize(8))
+			.body("msg", hasItems(
+					"Data da Movimentação é obrigatório",
+					"Data do pagamento é obrigatório",
+					"Descrição é obrigatório",
+					"Interessado é obrigatório",
+					"Valor é obrigatório",
+					"Valor deve ser um número",
+					"Conta é obrigatório",
+					"Situação é obrigatório"
+					));
+	}
+	
+	@Test
+	public void naoDeveRemoverContaComMovimentacoes() {
+		enviaMovimentacao(criaMovimentacao(REC, true));
+		
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("contaID", CONTA_ID)
+		.when()
+			.delete("/contas/{contaID}")
+		.then()
+			.statusCode(500)
+			.log().all()
+			.body("constraint", is("transacoes_conta_id_foreign"));
+	}
+	
+	private void removeConta()
+	
+	@Test
+	public void deveRemoverConta() {
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("contaID", CONTA_ID)
+		.when()
+			.delete("/contas/{contaID}")
+		.then()
+			.statusCode(204);
+	}
+	
+	@Test
+	public void naoDeveRemoverContaInexistente() {
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("contaID", 00000)
+		.when()
+			.delete("/contas/{contaID}")
+		.then()
+			.statusCode(404);
+	}
+	
+	@Test
+	public void deveCalcularSaldoComUmaMovimentacaoEmUmaConta() {
+		//criaConta("contaComMovimentação");
+		deveInserirMovimentacaoReceitaStatusTrue();
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+		.when()
+			.get("/saldo")
+		.then()
+			.statusCode(200)
+			.body("", hasSize(1))
+			.body("saldo.findAll{it = 200.00}.size()", is(1));
+	}
+	
+	@Test
+	public void deveCalcularSaldoComUmaMovimentacaoEmMaisDeUmaConta() {
+		deveInserirMovimentacaoReceitaStatusTrue();
+		criaConta("contaComMovimentação");
+		deveInserirMovimentacaoReceitaStatusTrue();
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+		.when()
+			.get("/saldo")
+		.then()
+			.statusCode(200)
+			.body("", hasSize(2))
+			.body("saldo.findAll{it = 200.00}.size()", is(2));
+	}
+	
+	@Test
+	public void naoDeveCalcularSaldoSemMovimentacoes() {
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+		.when()
+			.get("/saldo")
+		.then()
+			.statusCode(200)
+			.body("", hasSize(0));
+	}
+	
+	@Test
+	public void deveRemoverTransacao() {
+		deveInserirMovimentacaoReceitaStatusTrue();
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("mov_id", MOV_ID)
+		.when()
+			.delete("/transacoes/{mov_id}")
+		.then()
+			.statusCode(204);
+	}
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:738)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2022-04-25 20:08:08.600
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:738)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2022-04-25 20:08:08.601
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:738)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-04-25 20:13:35.667
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-04-25 20:13:35.671
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-04-25 20:16:02.244
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-04-25 20:16:02.247
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-04-25 20:16:46.537
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-04-25 20:16:46.539
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-04-25 20:18:17.565
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-04-25 20:18:17.568
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-04-25 20:21:39.722
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-04-25 20:21:39.726
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.jdt.core 4 4 2022-04-25 20:25:38.556
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package br.cra.tests;
+
+import static br.cra.tests.TipoMovimentacao.*;
+import static io.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.*;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import br.cra.core.BaseTest;
+import io.restassured.specification.RequestSpecification;
+
+public class ProjectTests extends BaseTest {
+	private String TOKEN;
+	private Integer CONTA_ID; 
+	private Integer MOV_ID;
+
+	@Before
+	public void Before() {
+		coletaToken();
+		System.out.println("Passou aqui");
+		criaConta("contaPadrão");
+		
+	}
+	
+	 @After private void After() { 	 
+		 removeConta(CONTA_ID);  
+	}
+	
+	
+	
+	/*
+	 * private void removeContas() { ArrayList<Object> lst = listaContas();
+	 * while(lst.ha)
+	 * 
+	 * }
+	 */
+
+	/*
+	 * private ArrayList<Object> listaContas() { ArrayList<Object> listaContas =
+	 * given() .header("Authorization", "JWT " + TOKEN) .when() .get("/contas")
+	 * .then() .statusCode(200) .extract().path(""); return listaContas; }
+	 */
+	
+	private void coletaToken() {
+		Map<String, String> login = new HashMap<String, String>();
+		login.put("email", "igor@projeto");
+		login.put("senha", "projeto123");
+		
+		TOKEN = 
+				given()
+					.body(login)
+				.when()
+					.post("/signin")
+				.then()
+					.statusCode(200)
+					.extract().path("token")
+					;
+	}
+	
+	private void criaConta(String nome) {
+		Conta novaConta = new Conta(nome);
+		CONTA_ID =  given()
+					.header("Authorization", "JWT " + TOKEN)
+					.body(novaConta)
+				.when()
+					.post("/contas")
+				.then()
+					.statusCode(201)
+					.body("nome", is(novaConta.getNome()))
+					.extract().path("id");
+		
+	}
+	
+	private Movimentacoes criaMovimentacao(TipoMovimentacao tipo, Boolean status) {
+		Movimentacoes mov = new Movimentacoes();
+		mov.setConta_id(CONTA_ID);
+		mov.setData_transacao("19/04/2022");
+		mov.setData_pagamento("20/04/2022");
+		mov.setDescricao("trans1");
+		mov.setEnvolvido("zezin da padaria");
+		mov.setStatus(status);
+		mov.setTipo(tipo);
+		mov.setValor(100f);
+		
+		return mov;
+		
+	}
+	
+	private void enviaMovimentacao(Movimentacoes mov) {
+		MOV_ID = 
+				given()
+					.header("Authorization", "JWT " + TOKEN)
+					.body(mov)
+				.when()
+					.post("/transacoes")
+				.then()
+					.statusCode(201)
+					.body("tipo", is(""+mov.getTipo()))
+					.body("status", is(mov.getStatus()))
+					.extract().path("id");
+	}
+	
+	private void removeConta(Integer conta_id) {
+		given()
+		.header("Authorization", "JWT " + TOKEN)
+		.pathParam("contaID", conta_id)
+		.when()
+		.delete("/contas/{contaID}")
+		.then()
+		.statusCode(204);
+	}
+	
+	private Boolean temTransacoes()
+	
+	
+	
+	
+	
+	
+	@Test
+	public void falhaAoAcessarSemToken() {
+		given()
+		.when()	
+			.get("/contas")
+		.then()
+			.statusCode(401);
+	}
+
+	@Test
+	public void deveAcessarComToken() {
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+		.when()
+			.get("/contas")
+		.then()
+			.statusCode(200);
+	}
+
+	@Test
+	public void deveIncluirConta() {
+		criaConta("contaTest");
+	}
+
+	@Test
+	public void naoDeveIncluirSemCampoObrigatorio() {
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.body("{ \"\": \"\" }")
+		.when()
+			.post("/contas")
+		.then()
+			.statusCode(400).body("msg[0]", is("Nome é um campo obrigatório"));
+	}
+
+	@Test
+	public void deveAlterarConta() {
+		Conta conta = new Conta("conta1_alterada");
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("id", CONTA_ID)
+			.body(conta)
+		.when()
+			.put("/contas/{id}")
+		.then()
+			.log().all()
+			.statusCode(200)
+			.body("nome", is("conta1_alterada"));
+	}
+	
+	@Test
+	public void naoDeveAlterarContaInexistente() {				
+		Conta conta = new Conta("NOMEQUALQUER");
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("id", "00000")
+			.body(conta)
+		.when()
+			.put("/contas/{id}")
+		.then()
+			.log().all()
+			.statusCode(404);
+	}
+
+	@Test
+	public void naoDeveIncluirContaRepetida() {
+		Conta conta = new Conta("contaPadrão");
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.body(conta)
+		.when()
+			.post("/contas")
+		.then()
+			.statusCode(400)
+			.body("error", is("Já existe uma conta com esse nome!"));;
+	}
+	
+	@Test
+	public void deveInserirMovimentacaoDespesaStatusFalse() {
+		Movimentacoes mov = criaMovimentacao(DESP, false);
+		enviaMovimentacao(mov);
+				
+	}
+	
+	@Test
+	public void deveInserirMovimentacaoReceitaStatusTrue() {
+		Movimentacoes mov = criaMovimentacao(REC, true);
+		enviaMovimentacao(mov);
+	}
+	
+	@Test
+	public void naoDeveInserirMovimentacaoComDatasInvalidas() {
+		Movimentacoes mov = new Movimentacoes();
+		mov.setConta_id(CONTA_ID);
+		mov.setData_transacao("20/04/2028");
+		mov.setData_pagamento("25042028");
+		mov.setDescricao("trans2");
+		mov.setEnvolvido("zezin da padaria");
+		mov.setStatus(true);
+		mov.setTipo(REC);
+		mov.setValor(200f);
+		
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.body(mov)
+		.when()
+			.post("/transacoes")
+		.then()
+			.statusCode(400)
+			.log().all()
+			.body("", hasSize(2))
+			.body("param[0]", is("data_transacao"))
+			.body("msg[0]", is("Data da Movimentação deve ser menor ou igual à data atual"))
+			.body("param[1]", is("data_pagamento"))
+			.body("msg[1]", is("Data do pagamento inválida (DD/MM/YYYY)"));
+	}
+	
+	@Test
+	public void naoDeveInserirMovimentacaoVazia() {
+		Movimentacoes mov = new Movimentacoes();
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.body(mov)
+		.when()
+			.post("/transacoes")
+		.then()
+			.statusCode(400)
+			.body("", hasSize(8))
+			.body("msg", hasItems(
+					"Data da Movimentação é obrigatório",
+					"Data do pagamento é obrigatório",
+					"Descrição é obrigatório",
+					"Interessado é obrigatório",
+					"Valor é obrigatório",
+					"Valor deve ser um número",
+					"Conta é obrigatório",
+					"Situação é obrigatório"
+					));
+	}
+	
+	@Test
+	public void deveRemoverConta() {
+		removeConta(CONTA_ID);
+	}
+	
+	@Test
+	public void naoDeveRemoverContaComMovimentacoes() {
+		enviaMovimentacao(criaMovimentacao(REC, true));
+		
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("contaID", CONTA_ID)
+		.when()
+			.delete("/contas/{contaID}")
+		.then()
+			.statusCode(500)
+			.log().all()
+			.body("constraint", is("transacoes_conta_id_foreign"));
+	}
+	
+	
+	@Test
+	public void naoDeveRemoverContaInexistente() {
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("contaID", 00000)
+		.when()
+			.delete("/contas/{contaID}")
+		.then()
+			.statusCode(404);
+	}
+	
+	@Test
+	public void deveCalcularSaldoComUmaMovimentacaoEmUmaConta() {
+		//criaConta("contaComMovimentação");
+		enviaMovimentacao(criaMovimentacao(REC, true));
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+		.when()
+			.get("/saldo")
+		.then()
+			.statusCode(200)
+			.body("", hasSize(1))
+			.body("saldo.findAll{it = 200.00}.size()", is(1));
+	}
+	
+	@Test
+	public void deveCalcularSaldoComUmaMovimentacaoEmMaisDeUmaConta() {
+		deveInserirMovimentacaoReceitaStatusTrue();
+		criaConta("contaComMovimentação");
+		deveInserirMovimentacaoReceitaStatusTrue();
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+		.when()
+			.get("/saldo")
+		.then()
+			.statusCode(200)
+			.body("", hasSize(2))
+			.body("saldo.findAll{it = 200.00}.size()", is(2));
+	}
+	
+	@Test
+	public void naoDeveCalcularSaldoSemMovimentacoes() {
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+		.when()
+			.get("/saldo")
+		.then()
+			.statusCode(200)
+			.body("", hasSize(0));
+	}
+	
+	@Test
+	public void deveRemoverTransacao() {
+		deveInserirMovimentacaoReceitaStatusTrue();
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("mov_id", MOV_ID)
+		.when()
+			.delete("/transacoes/{mov_id}")
+		.then()
+			.statusCode(204);
+	}
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:725)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2022-04-25 20:25:38.557
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:725)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2022-04-25 20:25:38.557
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:725)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
