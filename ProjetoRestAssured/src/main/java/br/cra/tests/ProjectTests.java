@@ -24,13 +24,22 @@ public class ProjectTests extends BaseTest {
 	@Before
 	public void Before() {
 		coletaToken();
-		System.out.println("Passou aqui");
+		System.out.println("Criando conta padrão...");
 		criaConta("contaPadrão");
 		
 	}
 	
-	 @After private void After() { 	 
-		 removeConta(CONTA_ID);  
+	 @After 
+	 public void After() { 	 
+		 if (temTransacoes()) { 
+			 System.out.println("Tem transações!");
+			 removeMovimentacao(MOV_ID);
+			 System.out.println("Removeu transação do ID:" + MOV_ID);
+		 }
+		 if(temContaAtiva()) {
+			 removeConta(CONTA_ID);
+			 System.out.println("Removeu conta do id:" + CONTA_ID );
+		 }
 	}
 	
 	
@@ -69,13 +78,15 @@ public class ProjectTests extends BaseTest {
 		CONTA_ID =  given()
 					.header("Authorization", "JWT " + TOKEN)
 					.body(novaConta)
+					.log().all()
 				.when()
 					.post("/contas")
 				.then()
+					.log().all()
 					.statusCode(201)
 					.body("nome", is(novaConta.getNome()))
 					.extract().path("id");
-		
+		System.out.println("Conta criada!");
 	}
 	
 	private Movimentacoes criaMovimentacao(TipoMovimentacao tipo, Boolean status) {
@@ -98,22 +109,28 @@ public class ProjectTests extends BaseTest {
 				given()
 					.header("Authorization", "JWT " + TOKEN)
 					.body(mov)
+					.log().all()
 				.when()
 					.post("/transacoes")
 				.then()
+					.log().all()
 					.statusCode(201)
 					.body("tipo", is(""+mov.getTipo()))
 					.body("status", is(mov.getStatus()))
-					.extract().path("id");
+					.extract().path("id")
+					;
+		System.out.println("enviei movimentação com id: "+ MOV_ID);
 	}
 	
 	private void removeConta(Integer conta_id) {
 		given()
 		.header("Authorization", "JWT " + TOKEN)
 		.pathParam("contaID", conta_id)
+		.log().all()
 		.when()
 		.delete("/contas/{contaID}")
 		.then()
+		.log().all()
 		.statusCode(204);
 	}
 	
@@ -129,9 +146,29 @@ public class ProjectTests extends BaseTest {
 		return lista.size() != 0;
 	}
 	
+	private Boolean temContaAtiva() {
+		ArrayList<Object> lista =
+			 given()
+				.header("Authorization", "JWT " + TOKEN)
+			.when()
+				.get("/contas")
+			.then()
+				.statusCode(200)
+				.extract().path("");
+		return lista.size() != 0;
+	}
 	
-	
-	
+	private void removeMovimentacao(Integer mov_id) {
+		given()
+			.header("Authorization", "JWT " + TOKEN)
+			.pathParam("movID", mov_id)
+			.log().all()
+		.when()
+			.delete("/transacoes/{movID}")
+		.then()
+			.log().all()
+			.statusCode(204);
+	}
 	
 	
 	@Test
@@ -213,8 +250,11 @@ public class ProjectTests extends BaseTest {
 	
 	@Test
 	public void deveInserirMovimentacaoDespesaStatusFalse() {
+		System.out.println("deveInserirMovimentacaoDespesaStatusFalse");
 		Movimentacoes mov = criaMovimentacao(DESP, false);
 		enviaMovimentacao(mov);
+		System.out.println("------->>>>>> TEM TRANSAÇÕES QUANDO FAÇO MOVIMENTAÇÃO COM STATUS FALSO?" + temTransacoes());
+		
 				
 	}
 	
@@ -281,6 +321,7 @@ public class ProjectTests extends BaseTest {
 	
 	@Test
 	public void naoDeveRemoverContaComMovimentacoes() {
+		System.out.println("naoDeveRemoverContaComMovimentacoes");
 		enviaMovimentacao(criaMovimentacao(REC, true));
 		
 		given()
@@ -293,6 +334,7 @@ public class ProjectTests extends BaseTest {
 			.log().all()
 			.body("constraint", is("transacoes_conta_id_foreign"));
 	}
+	
 	
 	
 	@Test
@@ -348,13 +390,7 @@ public class ProjectTests extends BaseTest {
 	
 	@Test
 	public void deveRemoverTransacao() {
-		deveInserirMovimentacaoReceitaStatusTrue();
-		given()
-			.header("Authorization", "JWT " + TOKEN)
-			.pathParam("mov_id", MOV_ID)
-		.when()
-			.delete("/transacoes/{mov_id}")
-		.then()
-			.statusCode(204);
+		enviaMovimentacao(criaMovimentacao(REC, true));
+		removeMovimentacao(MOV_ID);
 	}
 }

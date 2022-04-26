@@ -1764,3 +1764,67 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact com.google.gu
 2022-04-25 20:18:17,568 [Worker-2051: Launching Rerun br.cra.tests.ProjectTests.naoDeveRemoverContaComMovimentacoes] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2022-04-25 20:21:39,721 [Worker-2049: Launching Rerun br.cra.tests.ProjectTests.naoDeveRemoverContaComMovimentacoes] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2022-04-25 20:21:39,722 [Worker-2049: Launching Rerun br.cra.tests.ProjectTests.naoDeveRemoverContaComMovimentacoes] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-25 20:21:39,725 [Worker-2049: Launching Rerun br.cra.tests.ProjectTests.naoDeveRemoverContaComMovimentacoes] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-25 20:21:39,726 [Worker-2049: Launching Rerun br.cra.tests.ProjectTests.naoDeveRemoverContaComMovimentacoes] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-26 07:13:24,154 [Worker-2228: Launching Rerun br.cra.tests.ProjectTests.naoDeveRemoverContaComMovimentacoes] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-26 07:13:24,159 [Worker-2228: Launching Rerun br.cra.tests.ProjectTests.naoDeveRemoverContaComMovimentacoes] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-26 07:13:24,161 [Worker-2228: Launching Rerun br.cra.tests.ProjectTests.naoDeveRemoverContaComMovimentacoes] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-26 07:13:24,162 [Worker-2228: Launching Rerun br.cra.tests.ProjectTests.naoDeveRemoverContaComMovimentacoes] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-26 07:15:23,980 [Worker-2227: Launching ProjectTests.naoDeveRemoverContaComMovimentacoes] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-26 07:15:23,982 [Worker-2227: Launching ProjectTests.naoDeveRemoverContaComMovimentacoes] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-26 07:15:23,984 [Worker-2227: Launching ProjectTests.naoDeveRemoverContaComMovimentacoes] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-26 07:15:23,985 [Worker-2227: Launching ProjectTests.naoDeveRemoverContaComMovimentacoes] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-26 07:16:08,565 [Worker-2229: Launching ProjectTests.deveRemoverConta] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-26 07:16:08,567 [Worker-2229: Launching ProjectTests.deveRemoverConta] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-26 07:16:08,569 [Worker-2229: Launching ProjectTests.deveRemoverConta] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-26 07:16:08,570 [Worker-2229: Launching ProjectTests.deveRemoverConta] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-26 07:17:45,565 [Worker-2229: Launching ProjectTests.naoDeveRemoverContaComMovimentacoes] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-26 07:17:45,566 [Worker-2229: Launching ProjectTests.naoDeveRemoverContaComMovimentacoes] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-26 07:17:45,568 [Worker-2229: Launching ProjectTests.naoDeveRemoverContaComMovimentacoes] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-26 07:17:45,569 [Worker-2229: Launching ProjectTests.naoDeveRemoverContaComMovimentacoes] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-26 07:22:07,915 [Worker-2220: Launching ProjectTests.naoDeveRemoverContaInexistente] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-26 07:22:07,921 [Worker-2220: Launching ProjectTests.naoDeveRemoverContaInexistente] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-26 07:22:07,923 [Worker-2220: Launching ProjectTests.naoDeveRemoverContaInexistente] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-26 07:22:07,925 [Worker-2220: Launching ProjectTests.naoDeveRemoverContaInexistente] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-26 07:42:45,481 [Worker-2242: Launching ProjectTests.deveRemoverTransacao] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-26 07:42:45,483 [Worker-2242: Launching ProjectTests.deveRemoverTransacao] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-26 07:42:45,484 [Worker-2242: Launching ProjectTests.deveRemoverTransacao] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-26 07:42:45,485 [Worker-2242: Launching ProjectTests.deveRemoverTransacao] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-26 07:43:32,404 [Worker-2232: Launching ProjectTests.naoDeveRemoverContaComMovimentacoes] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-26 07:43:32,407 [Worker-2232: Launching ProjectTests.naoDeveRemoverContaComMovimentacoes] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-26 07:43:32,408 [Worker-2232: Launching ProjectTests.naoDeveRemoverContaComMovimentacoes] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-26 07:43:32,409 [Worker-2232: Launching ProjectTests.naoDeveRemoverContaComMovimentacoes] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-26 07:45:00,543 [Worker-2244: Launching Rerun br.cra.tests.ProjectTests.naoDeveRemoverContaComMovimentacoes] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-26 07:45:00,545 [Worker-2244: Launching Rerun br.cra.tests.ProjectTests.naoDeveRemoverContaComMovimentacoes] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-26 07:45:00,547 [Worker-2244: Launching Rerun br.cra.tests.ProjectTests.naoDeveRemoverContaComMovimentacoes] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-26 07:45:00,548 [Worker-2244: Launching Rerun br.cra.tests.ProjectTests.naoDeveRemoverContaComMovimentacoes] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-26 07:47:04,057 [Worker-2245: Launching Rerun br.cra.tests.ProjectTests.naoDeveRemoverContaComMovimentacoes] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-26 07:47:04,059 [Worker-2245: Launching Rerun br.cra.tests.ProjectTests.naoDeveRemoverContaComMovimentacoes] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-26 07:47:04,062 [Worker-2245: Launching Rerun br.cra.tests.ProjectTests.naoDeveRemoverContaComMovimentacoes] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-26 07:47:04,064 [Worker-2245: Launching Rerun br.cra.tests.ProjectTests.naoDeveRemoverContaComMovimentacoes] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-26 07:54:45,905 [Worker-2252: Launching Rerun br.cra.tests.ProjectTests] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-26 07:54:45,908 [Worker-2252: Launching Rerun br.cra.tests.ProjectTests] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-26 07:54:45,909 [Worker-2252: Launching Rerun br.cra.tests.ProjectTests] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-26 07:54:45,911 [Worker-2252: Launching Rerun br.cra.tests.ProjectTests] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-26 07:58:44,119 [Worker-2251: Launching Rerun br.cra.tests.ProjectTests] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-26 07:58:44,121 [Worker-2251: Launching Rerun br.cra.tests.ProjectTests] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-26 07:58:44,122 [Worker-2251: Launching Rerun br.cra.tests.ProjectTests] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-26 07:58:44,125 [Worker-2251: Launching Rerun br.cra.tests.ProjectTests] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-26 08:03:59,617 [Worker-2256: Launching Rerun br.cra.tests.ProjectTests] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-26 08:03:59,618 [Worker-2256: Launching Rerun br.cra.tests.ProjectTests] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-26 08:03:59,619 [Worker-2256: Launching Rerun br.cra.tests.ProjectTests] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-26 08:03:59,620 [Worker-2256: Launching Rerun br.cra.tests.ProjectTests] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-26 08:05:00,511 [Worker-2251: Launching Rerun br.cra.tests.ProjectTests] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-26 08:05:00,514 [Worker-2251: Launching Rerun br.cra.tests.ProjectTests] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-26 08:05:00,516 [Worker-2251: Launching Rerun br.cra.tests.ProjectTests] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-26 08:05:00,517 [Worker-2251: Launching Rerun br.cra.tests.ProjectTests] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-26 08:08:06,405 [Worker-2264: Launching Rerun br.cra.tests.ProjectTests] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-26 08:08:06,407 [Worker-2264: Launching Rerun br.cra.tests.ProjectTests] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-26 08:08:06,409 [Worker-2264: Launching Rerun br.cra.tests.ProjectTests] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-26 08:08:06,410 [Worker-2264: Launching Rerun br.cra.tests.ProjectTests] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-26 08:11:20,007 [Worker-2267: Launching Rerun br.cra.tests.ProjectTests] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-26 08:11:20,009 [Worker-2267: Launching Rerun br.cra.tests.ProjectTests] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-04-26 08:11:20,010 [Worker-2267: Launching Rerun br.cra.tests.ProjectTests] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-26 08:11:20,011 [Worker-2267: Launching Rerun br.cra.tests.ProjectTests] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-04-26 08:17:13,873 [Worker-2274: Launching ProjectTests.deveInserirMovimentacaoDespesaStatusFalse] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-26 08:17:13,875 [Worker-2274: Launching ProjectTests.deveInserirMovimentacaoDespesaStatusFalse] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
